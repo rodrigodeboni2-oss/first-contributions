@@ -29,14 +29,14 @@ const projetos = [
     titulo: "II Verão Costa a Costa",
     resumo:
       "Organização e produção das etapas do circuito esportivo e cultural em 6 cidades do litoral baiano — quase 25 mil participantes.",
-    imagem: "/images/eventos/verao-costa-a-costa-volei-acao.webp",
+    imagem: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/verao-costa-a-costa-volei-praia.jpg",
     href: "/projetos/verao-costa-a-costa",
   },
   {
     titulo: "Minas Urbano",
     resumo:
       "Produção de eventos e ativações do maior programa de esportes urbanos do país, previsto para 48 municípios de Minas Gerais.",
-    imagem: "/images/eventos/minas-urbano-abertura.webp",
+    imagem: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/minas-urbano-abertura.png",
     href: "/projetos/minas-urbano",
   },
   {
@@ -137,7 +137,7 @@ export default function Home() {
         <div className="grid overflow-hidden rounded-3xl bg-slate-900 md:grid-cols-2">
           <div className="relative min-h-64">
             <Image
-              src="/images/eventos/copa-feminina-contagem-regressiva.webp"
+              src="https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/copa-feminina-contagem-regressiva-dique-tororo.png"
               alt="Evento de contagem regressiva de 1 ano para a Copa do Mundo Feminina FIFA 2027, em Salvador, com a campanha As Mulheres Mudam o Jogo"
               fill
               className="object-cover"
@@ -223,7 +223,7 @@ export default function Home() {
         <div className="flex flex-col items-center gap-10 md:flex-row">
           <div className="relative h-64 w-full shrink-0 overflow-hidden rounded-2xl shadow-md md:w-96">
             <Image
-              src="/images/ney-campello/ney-campello-retrato-principal.webp"
+              src="https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/ney-campello/ney-campello-retrato-principal.jpg"
               alt="Ney Jorge Campello falando ao microfone em reunião institucional"
               fill
               className="object-cover"

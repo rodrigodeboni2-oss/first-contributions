@@ -59,27 +59,27 @@ const formacao = [
 
 const galeria = [
   {
-    src: "/images/ney-campello/ney-campello-retrato-principal.webp",
+    src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/ney-campello/ney-campello-retrato-principal.jpg",
     alt: "Ney Campello falando ao microfone em reunião institucional",
   },
   {
-    src: "/images/ney-campello/ney-campello-reuniao-institucional.webp",
+    src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/ney-campello/ney-campello-reuniao-institucional.jpg",
     alt: "Ney Campello em reunião de trabalho institucional",
   },
   {
-    src: "/images/ney-campello/ney-campello-reuniao-tecnica.webp",
+    src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/ney-campello/ney-campello-reuniao-tecnica-com-equipe.jpg",
     alt: "Ney Campello em reunião técnica",
   },
   {
-    src: "/images/ney-campello/ney-campello-reuniao-ampliada.webp",
+    src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/ney-campello/ney-campello-reuniao-ampliada.jpg",
     alt: "Reunião ampliada com a participação de Ney Campello",
   },
   {
-    src: "/images/ney-campello/ney-campello-entrevista-tv.webp",
+    src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/ney-campello/ney-campello-entrevista-tv.png",
     alt: "Ney Campello em entrevista em estúdio de televisão",
   },
   {
-    src: "/images/ney-campello/ney-campello-trajetoria-publica.webp",
+    src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/ney-campello/ney-campello-trajetoria-publica.png",
     alt: "Registro histórico da trajetória pública de Ney Campello",
   },
 ];
@@ -115,7 +115,7 @@ export default function NeyCampello() {
         </div>
         <div className="relative h-72 w-full overflow-hidden rounded-3xl shadow-lg md:h-96">
           <Image
-            src="/images/ney-campello/ney-campello-retrato-principal.webp"
+            src="https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/ney-campello/ney-campello-retrato-principal.jpg"
             alt="Ney Jorge Campello falando ao microfone em reunião institucional"
             fill
             className="object-cover"
@@ -151,7 +151,7 @@ export default function NeyCampello() {
         <div className="space-y-4">
           <div className="relative h-64 overflow-hidden rounded-2xl shadow-md">
             <Image
-              src="/images/ney-campello/ney-campello-trajetoria-publica.webp"
+              src="https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/ney-campello/ney-campello-trajetoria-publica.png"
               alt="Registro histórico da trajetória pública de Ney Campello"
               fill
               className="object-cover"
@@ -163,7 +163,7 @@ export default function NeyCampello() {
           </p>
           <div className="relative h-64 overflow-hidden rounded-2xl shadow-md">
             <Image
-              src="/images/ney-campello/ney-campello-reuniao-institucional.webp"
+              src="https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/ney-campello/ney-campello-reuniao-institucional.jpg"
               alt="Ney Campello em reunião de trabalho institucional"
               fill
               className="object-cover"
@@ -185,7 +185,7 @@ export default function NeyCampello() {
       <div className="mt-8 grid gap-6 md:grid-cols-2">
         <div className="relative h-72 overflow-hidden rounded-2xl shadow-md">
           <Image
-            src="/images/ney-campello/ney-campello-reuniao-ampliada.webp"
+            src="https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/ney-campello/ney-campello-reuniao-ampliada.jpg"
             alt="Reunião ampliada com a participação de Ney Campello"
             fill
             className="object-cover"
@@ -193,7 +193,7 @@ export default function NeyCampello() {
         </div>
         <div className="relative h-72 overflow-hidden rounded-2xl shadow-md">
           <Image
-            src="/images/ney-campello/ney-campello-reuniao-tecnica.webp"
+            src="https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/ney-campello/ney-campello-reuniao-tecnica-com-equipe.jpg"
             alt="Ney Campello em reunião técnica"
             fill
             className="object-cover"
@@ -215,7 +215,7 @@ export default function NeyCampello() {
         >
           <div className="relative aspect-[16/9] overflow-hidden">
             <Image
-              src="/images/ney-campello/ney-campello-reuniao-ampliada.webp"
+              src="https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/ney-campello/ney-campello-reuniao-ampliada.jpg"
               alt="Ney Campello em pose reflexiva"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -252,7 +252,7 @@ export default function NeyCampello() {
         >
           <div className="relative aspect-[16/9] overflow-hidden">
             <Image
-              src="/images/ney-campello/ney-campello-entrevista-tv.webp"
+              src="https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/ney-campello/ney-campello-entrevista-tv.png"
               alt="Ney Campello em entrevista ao Jornal da Manhã, em estúdio de televisão"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -338,7 +338,7 @@ export default function NeyCampello() {
       <div className="mt-16 flex flex-col items-center gap-6 rounded-3xl border border-slate-200 p-10 text-center md:flex-row md:text-left">
         <div className="relative h-40 w-40 shrink-0 overflow-hidden rounded-2xl">
           <Image
-            src="/images/ney-campello/ney-campello-reuniao-ampliada.webp"
+            src="https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/ney-campello/ney-campello-reuniao-ampliada.jpg"
             alt="Ney Campello em pose reflexiva"
             fill
             className="object-cover"
