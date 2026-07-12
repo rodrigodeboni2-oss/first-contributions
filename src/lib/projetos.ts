@@ -135,20 +135,20 @@ export const projetos: Projeto[] = [
       { numero: "3 mil", legenda: "atletas envolvidos" },
     ],
     hero: {
-      src: "/images/eventos/verao-costa-a-costa-volei-praia.jpg",
-      alt: "Atividade de vôlei de praia no II Verão Costa a Costa",
-      legenda: "Vôlei de praia em uma das arenas do circuito",
+      src: "/images/eventos/verao-costa-a-costa-oficial-hero-2024.jpg",
+      alt: "Partida de futevôlei na etapa de Ilhéus do II Verão Costa a Costa",
+      legenda: "Arena oficial do II Verão Costa a Costa em Ilhéus",
     },
     corpo: [
       {
-        src: "/images/eventos/verao-costa-a-costa-hoje.jpg",
-        alt: "Vista panorâmica de uma arena do II Verão Costa a Costa",
-        legenda: "Arena, público e atividades de praia em uma das etapas do circuito",
+        src: "/images/eventos/verao-costa-a-costa-futevolei-acao-2024.jpg",
+        alt: "Atleta em ação durante disputa de futevôlei no II Verão Costa a Costa",
+        legenda: "Futevôlei durante a etapa de Ilhéus do circuito",
       },
       {
-        src: "/images/eventos/verao-costa-a-costa-amanha.jpg",
-        alt: "Equipe e participantes reunidos no II Verão Costa a Costa",
-        legenda: "Equipe, participantes e organização reunidos durante o evento",
+        src: "/images/eventos/verao-costa-a-costa-volei-jovens-2024.jpg",
+        alt: "Jovens participando de atividade de vôlei no II Verão Costa a Costa",
+        legenda: "Participação juvenil e atividades esportivas na arena do evento",
       },
     ],
     instituicoes:
@@ -157,8 +157,8 @@ export const projetos: Projeto[] = [
     cardSpan: "md:col-span-8",
     cardAspecto: "aspect-[16/9]",
     cardImagem: {
-      src: "/images/eventos/verao-costa-a-costa-volei-praia.jpg",
-      alt: "Atividade de vôlei de praia no II Verão Costa a Costa",
+      src: "/images/eventos/verao-costa-a-costa-oficial-hero-2024.jpg",
+      alt: "Partida de futevôlei na etapa de Ilhéus do II Verão Costa a Costa",
     },
   },
   {

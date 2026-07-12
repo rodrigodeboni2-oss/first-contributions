@@ -41,7 +41,7 @@ const imagensEmpresa = [
     legenda: "Estrutura itinerante para ações nos territórios",
   },
   {
-    src: "/images/eventos/verao-costa-a-costa-volei-praia.jpg",
+    src: "/images/eventos/verao-costa-a-costa-oficial-hero-2024.jpg",
     alt: "Atividade esportiva em arena de evento",
     legenda: "Produção de eventos esportivos e culturais",
   },

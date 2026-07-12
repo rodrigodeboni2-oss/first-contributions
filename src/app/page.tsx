@@ -29,7 +29,7 @@ const projetos = [
     titulo: "II Verão Costa a Costa",
     resumo:
       "Organização e produção das etapas do circuito esportivo e cultural em 6 cidades do litoral baiano — quase 25 mil participantes.",
-    imagem: "/images/eventos/verao-costa-a-costa-volei-praia.jpg",
+    imagem: "/images/eventos/verao-costa-a-costa-oficial-hero-2024.jpg",
     href: "/projetos/verao-costa-a-costa",
   },
   {

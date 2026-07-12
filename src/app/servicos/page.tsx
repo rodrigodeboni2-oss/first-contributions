@@ -346,7 +346,7 @@ export default function Servicos() {
           <Reveal className="mt-10" delay={80}>
             <div className="relative aspect-[16/10] overflow-hidden rounded-xl md:aspect-[21/9]">
               <Image
-                src="/images/eventos/verao-costa-a-costa-volei-praia.jpg"
+                src="/images/eventos/verao-costa-a-costa-oficial-hero-2024.jpg"
                 alt="Atividade esportiva em uma das arenas do Verão Costa a Costa"
                 fill
                 sizes="100vw"
