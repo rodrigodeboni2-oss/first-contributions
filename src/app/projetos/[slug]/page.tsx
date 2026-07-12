@@ -34,12 +34,21 @@ export default async function ProjetoPage({
 
   const relacionado = getProjeto(projeto.relacionado);
   const [imagemDois, imagemTres] = projeto.corpo;
+  const totalImagens = (projeto.hero ? 1 : 0) + projeto.corpo.length;
+  const paginaCompacta = totalImagens <= 2;
+  const paginaCompleta = totalImagens >= 6;
 
   return (
-    <article className="pb-24">
+    <article className={paginaCompacta ? "pb-16" : "pb-24"}>
       {/* 1. Hero */}
       {projeto.hero ? (
-        <div className="relative aspect-[16/10] w-full md:aspect-[16/9]">
+        <div
+          className={`relative w-full ${
+            paginaCompacta
+              ? "aspect-[4/3] md:aspect-[5/2]"
+              : "aspect-[16/10] md:aspect-[16/9]"
+          }`}
+        >
           <Image
             src={projeto.hero.src}
             alt={projeto.hero.alt}
@@ -51,7 +60,9 @@ export default async function ProjetoPage({
         </div>
       ) : (
         <div
-          className={`px-4 py-24 md:py-32 ${
+          className={`px-4 ${
+            paginaCompacta ? "py-16 md:py-20" : "py-24 md:py-32"
+          } ${
             projeto.slug === "observatorio-educacional"
               ? "bg-ink"
               : "bg-brand"
@@ -65,7 +76,7 @@ export default async function ProjetoPage({
 
       <div className="mx-auto max-w-6xl px-4">
         {/* Título e etiquetas */}
-        <Reveal className="mt-10 md:mt-14">
+        <Reveal className={paginaCompacta ? "mt-8 md:mt-10" : "mt-10 md:mt-14"}>
           <div className="flex flex-wrap items-center gap-3">
             <span
               className={`rounded-full border px-3 py-1 text-xs font-bold uppercase tracking-wide ${
@@ -91,7 +102,7 @@ export default async function ProjetoPage({
         </Reveal>
 
         {/* 2. Informações rápidas */}
-        <Reveal className="mt-10">
+        <Reveal className={paginaCompacta ? "mt-8" : "mt-10"}>
           <dl className="grid grid-cols-2 gap-x-8 gap-y-6 border-y border-slate-200 py-8 md:grid-cols-5">
             {[
               ["Período", projeto.periodo],
@@ -113,7 +124,11 @@ export default async function ProjetoPage({
         </Reveal>
 
         {/* 3. Contexto + frase destaque */}
-        <div className="mt-14 grid gap-10 md:grid-cols-12 md:gap-14">
+        <div
+          className={`grid gap-10 md:grid-cols-12 md:gap-14 ${
+            paginaCompacta ? "mt-10" : "mt-14"
+          }`}
+        >
           <Reveal className="md:col-span-7">
             <h2 className="font-display text-3xl text-slate-900 md:text-4xl">
               Contexto
@@ -130,7 +145,11 @@ export default async function ProjetoPage({
             </div>
           </Reveal>
           <Reveal className="md:col-span-5" delay={120}>
-            <p className="border-l-2 border-brand pl-6 font-display text-2xl leading-snug text-brand-dark md:mt-16 md:text-3xl">
+            <p
+              className={`border-l-2 border-brand pl-6 font-display text-2xl leading-snug text-brand-dark md:text-3xl ${
+                paginaCompacta ? "md:mt-10" : "md:mt-16"
+              }`}
+            >
               {projeto.fraseDestaque}
             </p>
           </Reveal>
@@ -138,8 +157,14 @@ export default async function ProjetoPage({
 
         {/* Imagem 2 — depois do contexto */}
         {imagemDois && (
-          <Reveal className="mt-14">
-            <div className="relative aspect-[16/9] overflow-hidden rounded-xl md:aspect-[16/10]">
+          <Reveal className={paginaCompacta ? "mt-10" : "mt-14"}>
+            <div
+              className={`relative overflow-hidden rounded-xl ${
+                paginaCompacta
+                  ? "aspect-[16/9] md:aspect-[21/9]"
+                  : "aspect-[16/9] md:aspect-[16/10]"
+              }`}
+            >
               <Image
                 src={imagemDois.src}
                 alt={imagemDois.alt}
@@ -157,7 +182,11 @@ export default async function ProjetoPage({
         )}
 
         {/* 4. Papel da Educatec */}
-        <div className="mt-16 grid gap-10 md:grid-cols-12 md:gap-14">
+        <div
+          className={`grid gap-10 md:grid-cols-12 md:gap-14 ${
+            paginaCompacta ? "mt-12" : "mt-16"
+          }`}
+        >
           <Reveal className="md:col-span-5">
             <div className="rounded-xl bg-paper p-8">
               <h2 className="font-display text-2xl text-slate-900">
@@ -225,7 +254,7 @@ export default async function ProjetoPage({
 
         {/* 6. Resultados */}
         {projeto.resultados.length > 0 && (
-          <Reveal className="mt-20">
+          <Reveal className={paginaCompacta ? "mt-14" : "mt-20"}>
             <div className="border-y border-slate-200 py-12">
               <p className="text-xs font-bold uppercase tracking-widest text-slate-400">
                 Resultados
@@ -246,11 +275,15 @@ export default async function ProjetoPage({
           </Reveal>
         )}
 
-        {/* Imagens adicionais do corpo (máx. 2 extras) */}
+        {/* Galeria adicional: cresce somente quando há acervo suficiente */}
         {projeto.corpo.length > 2 && (
           <Reveal className="mt-14">
-            <div className="grid gap-6 md:grid-cols-2">
-              {projeto.corpo.slice(2, 4).map((img) => (
+            <div
+              className={`grid gap-6 ${
+                paginaCompleta ? "md:grid-cols-3" : "md:grid-cols-2"
+              }`}
+            >
+              {projeto.corpo.slice(2).map((img) => (
                 <figure key={img.src}>
                   <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
                     <Image
@@ -273,7 +306,7 @@ export default async function ProjetoPage({
         )}
 
         {/* 8. Instituições */}
-        <Reveal className="mt-16">
+        <Reveal className={paginaCompacta ? "mt-12" : "mt-16"}>
           <p className="text-xs font-bold uppercase tracking-widest text-slate-400">
             Instituições relacionadas
           </p>
@@ -284,7 +317,7 @@ export default async function ProjetoPage({
 
         {/* 9. Projeto relacionado */}
         {relacionado && (
-          <Reveal className="mt-16">
+          <Reveal className={paginaCompacta ? "mt-12" : "mt-16"}>
             <Link
               href={`/projetos/${relacionado.slug}`}
               className="group flex flex-col justify-between gap-4 rounded-xl border border-slate-200 p-8 transition-colors duration-200 hover:border-brand md:flex-row md:items-center"
@@ -308,7 +341,7 @@ export default async function ProjetoPage({
         )}
 
         {/* 10. Contato */}
-        <Reveal className="mt-16">
+        <Reveal className={paginaCompacta ? "mt-12" : "mt-16"}>
           <div className="flex flex-col items-start justify-between gap-6 rounded-2xl bg-ink p-10 text-white md:flex-row md:items-center">
             <div>
               <h2 className="font-display text-2xl md:text-3xl">

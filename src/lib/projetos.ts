@@ -407,9 +407,9 @@ export const projetos: Projeto[] = [
       { numero: "41", legenda: "cidades brasileiras na rede internacional" },
     ],
     hero: {
-      src: "/images/eventos/projeto-institucional-a-confirmar.png",
-      alt: "Registro institucional relacionado à atuação educacional",
-      legenda: "Registro institucional presente no arquivo de fotos da Educatec",
+      src: "/images/projetos/ipecaeta/ipecaeta-vista-panoramica-4k.png",
+      alt: "Vista panorâmica do município de Ipecaetá, na Bahia",
+      legenda: "Vista panorâmica de Ipecaetá — imagem da Prefeitura Municipal",
     },
     corpo: [],
     instituicoes: "Município de Ipecaetá · AICE",
@@ -422,8 +422,8 @@ export const projetos: Projeto[] = [
     cardSpan: "md:col-span-8",
     cardAspecto: "aspect-[16/9]",
     cardImagem: {
-      src: "/images/eventos/projeto-institucional-a-confirmar.png",
-      alt: "Registro institucional relacionado à atuação educacional",
+      src: "/images/projetos/ipecaeta/ipecaeta-vista-panoramica-4k.png",
+      alt: "Vista panorâmica do município de Ipecaetá, na Bahia",
     },
   },
 ];

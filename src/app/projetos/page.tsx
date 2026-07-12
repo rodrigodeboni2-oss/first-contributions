@@ -31,16 +31,16 @@ export default function Projetos() {
         <Reveal className="md:col-span-5" delay={120}>
           <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
             <Image
-              src="/images/eventos/copa-feminina-contagem-regressiva-dique-tororo.png"
-              alt="Contagem regressiva para a Copa do Mundo Feminina FIFA 2027 em Salvador"
+              src="/images/projetos/copa-feminina-2027/ilustracao-copa-feminina-2027.jpg"
+              alt="Ilustração temática da Copa do Mundo Feminina 2027"
               fill
               sizes="(max-width: 768px) 100vw, 40vw"
-              className="object-cover"
+              className="bg-white object-contain"
               priority
             />
           </div>
           <p className="mt-2 text-xs text-slate-400">
-            Contagem regressiva de um ano para a Copa do Mundo Feminina FIFA 2027, em Salvador
+            Ilustração temática da Copa do Mundo Feminina 2027
           </p>
         </Reveal>
       </div>

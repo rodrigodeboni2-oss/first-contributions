@@ -193,16 +193,18 @@ export default function Servicos() {
         <section id="gestao" className="scroll-mt-36 pt-24 md:pt-32">
           <div className="grid gap-10 md:grid-cols-12 md:gap-14">
             <Reveal className="order-2 md:order-1 md:col-span-4">
-              <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
                 <Image
-                  src="/images/ney-campello/ney-campello-reuniao-tecnica-com-equipe.jpg"
-                  alt="Reunião técnica institucional"
+                  src="/images/ney-campello/ney-campello-reuniao-ampliada.jpg"
+                  alt="Ney Campello participando de reunião institucional ampliada"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
               </div>
-              <p className="mt-2 text-xs text-slate-400">Reunião técnica</p>
+              <p className="mt-2 text-xs text-slate-400">
+                Reunião institucional com gestores e equipes técnicas
+              </p>
             </Reveal>
             <Reveal className="order-1 md:order-2 md:col-span-6" delay={80}>
               <p className="font-display text-6xl text-slate-200 md:text-7xl">
@@ -303,16 +305,15 @@ export default function Servicos() {
             <Reveal className="md:col-span-7" delay={100}>
               <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
                 <Image
-                  src="/images/ney-campello/ney-campello-retrato-principal.jpg"
-                  alt="Ney Campello falando ao microfone durante encontro institucional"
+                  src="/images/servicos/ney-campello-minas-urbano.jpg"
+                  alt="Ney Campello ao lado de participante durante ação do Minas Urbano"
                   fill
                   sizes="(max-width: 768px) 100vw, 60vw"
-                  className="object-cover"
+                  className="object-cover object-[center_42%]"
                 />
               </div>
               <p className="mt-2 text-xs text-slate-400">
-                Ney Campello, fundador da Educatec, durante encontro
-                institucional
+                Ney Campello durante ação do Minas Urbano, em Minas Gerais
               </p>
               <blockquote className="mt-8 border-l-2 border-brand pl-6 font-display text-xl leading-snug text-brand-dark md:text-2xl">
                 “Educação e cultura são forças transformadoras.”
