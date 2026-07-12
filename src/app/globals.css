@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  --background: #faf8f4;
+  --foreground: #1c2733;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-manrope);
+  --font-display: var(--font-fraunces);
+  --color-brand: #1265ab;
+  --color-brand-dark: #0d4c82;
+  --color-brand-light: #e8f1f9;
+  --color-paper: #f2efe9;
+  --color-ink: #1c2733;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* ---- Revelação suave ao rolar ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.45s ease-out,
+    transform 0.45s ease-out;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---- Sublinhado editorial animado ---- */
+.link-editorial {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1.5px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size 240ms ease;
+  padding-bottom: 2px;
+}
+
+.link-editorial:hover {
+  background-size: 100% 1.5px;
+}
+
+/* ---- Zoom discreto em imagens de card ---- */
+.img-zoom {
+  transition: transform 280ms ease;
+}
+
+.group:hover .img-zoom {
+  transform: scale(1.03);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .img-zoom,
+  .group:hover .img-zoom {
+    transition: none;
+    transform: none;
+  }
+}
