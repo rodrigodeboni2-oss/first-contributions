@@ -31,22 +31,22 @@ const publicos = [
 
 const imagensEmpresa = [
   {
-    src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/forum-esportes-bahia-autoridades.jpg",
+    src: "/images/eventos/forum-esportes-bahia-autoridades.jpg",
     alt: "Equipe e participantes reunidos em atividade institucional",
     legenda: "Articulação institucional e desenvolvimento do esporte",
   },
   {
-    src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/minas-urbano-unidade-movel.png",
+    src: "/images/eventos/minas-urbano-unidade-movel.png",
     alt: "Unidade móvel de ação esportiva e educacional",
     legenda: "Estrutura itinerante para ações nos territórios",
   },
   {
-    src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/verao-costa-a-costa-volei-praia.jpg",
+    src: "/images/eventos/verao-costa-a-costa-volei-praia.jpg",
     alt: "Atividade esportiva em arena de evento",
     legenda: "Produção de eventos esportivos e culturais",
   },
   {
-    src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/copa-feminina-arena-fonte-nova.png",
+    src: "/images/eventos/copa-feminina-arena-fonte-nova.png",
     alt: "Reunião técnica na Arena Fonte Nova",
     legenda: "Planejamento e articulação de grandes agendas",
   },

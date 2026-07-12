@@ -71,14 +71,14 @@ export const projetos: Projeto[] = [
     ],
     resultados: [],
     hero: {
-      src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/copa-feminina-contagem-regressiva-dique-tororo.png",
+      src: "/images/eventos/copa-feminina-contagem-regressiva-dique-tororo.png",
       alt: "Evento de contagem regressiva de 1 ano para a Copa do Mundo Feminina FIFA 2027, em Salvador",
       legenda:
         "Contagem regressiva de 1 ano para a Copa, com a campanha \"As Mulheres Mudam o Jogo\" — Salvador/BA",
     },
     corpo: [
       {
-        src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/copa-feminina-arena-fonte-nova.png",
+        src: "/images/eventos/copa-feminina-arena-fonte-nova.png",
         alt: "Grupo em reunião técnica na Arena Fonte Nova, em Salvador",
         legenda: "Reunião técnica na Arena Fonte Nova, palco dos jogos em Salvador",
       },
@@ -93,7 +93,7 @@ export const projetos: Projeto[] = [
     cardSpan: "md:col-span-12",
     cardAspecto: "aspect-[16/9]",
     cardImagem: {
-      src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/copa-feminina-contagem-regressiva-dique-tororo.png",
+      src: "/images/eventos/copa-feminina-contagem-regressiva-dique-tororo.png",
       alt: "Contagem regressiva para a Copa do Mundo Feminina FIFA 2027 em Salvador",
     },
   },
@@ -135,18 +135,18 @@ export const projetos: Projeto[] = [
       { numero: "3 mil", legenda: "atletas envolvidos" },
     ],
     hero: {
-      src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/verao-costa-a-costa-volei-praia.jpg",
+      src: "/images/eventos/verao-costa-a-costa-volei-praia.jpg",
       alt: "Atividade de vôlei de praia no II Verão Costa a Costa",
       legenda: "Vôlei de praia em uma das arenas do circuito",
     },
     corpo: [
       {
-        src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/verao-costa-a-costa-hoje.jpg",
+        src: "/images/eventos/verao-costa-a-costa-hoje.jpg",
         alt: "Vista panorâmica de uma arena do II Verão Costa a Costa",
         legenda: "Arena, público e atividades de praia em uma das etapas do circuito",
       },
       {
-        src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/verao-costa-a-costa-amanha.jpg",
+        src: "/images/eventos/verao-costa-a-costa-amanha.jpg",
         alt: "Equipe e participantes reunidos no II Verão Costa a Costa",
         legenda: "Equipe, participantes e organização reunidos durante o evento",
       },
@@ -157,7 +157,7 @@ export const projetos: Projeto[] = [
     cardSpan: "md:col-span-8",
     cardAspecto: "aspect-[16/9]",
     cardImagem: {
-      src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/verao-costa-a-costa-volei-praia.jpg",
+      src: "/images/eventos/verao-costa-a-costa-volei-praia.jpg",
       alt: "Atividade de vôlei de praia no II Verão Costa a Costa",
     },
   },
@@ -197,18 +197,18 @@ export const projetos: Projeto[] = [
       { numero: "R$ 20 mi", legenda: "de investimento público anunciado" },
     ],
     hero: {
-      src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/minas-urbano-abertura.png",
+      src: "/images/eventos/minas-urbano-abertura.png",
       alt: "Abertura de etapa do Minas Urbano",
       legenda: "Abertura de etapa do programa em Minas Gerais",
     },
     corpo: [
       {
-        src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/minas-urbano-breakdance.png",
+        src: "/images/eventos/minas-urbano-breakdance.png",
         alt: "Apresentação de breaking em etapa do Minas Urbano",
         legenda: "Breaking: o esporte urbano como cultura e formação",
       },
       {
-        src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/minas-urbano-futebol-jovens.jpg",
+        src: "/images/eventos/minas-urbano-futebol-jovens.jpg",
         alt: "Atividade esportiva com jovens em etapa do Minas Urbano",
         legenda: "Atividade com jovens em uma das etapas municipais",
       },
@@ -219,7 +219,7 @@ export const projetos: Projeto[] = [
     cardSpan: "md:col-span-4",
     cardAspecto: "aspect-[3/4]",
     cardImagem: {
-      src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/minas-urbano-breakdance.png",
+      src: "/images/eventos/minas-urbano-breakdance.png",
       alt: "Apresentação de breaking em etapa do Minas Urbano",
     },
   },
@@ -259,13 +259,13 @@ export const projetos: Projeto[] = [
       { numero: "4", legenda: "municípios baianos" },
     ],
     hero: {
-      src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/formacao-educacional-a-confirmar.jpg",
+      src: "/images/eventos/formacao-educacional-a-confirmar.jpg",
       alt: "Registro de formação educacional com estudantes e equipe",
       legenda: "Registro de atividade educacional presente no arquivo de fotos",
     },
     corpo: [
       {
-        src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/projeto-institucional-a-confirmar.png",
+        src: "/images/eventos/projeto-institucional-a-confirmar.png",
         alt: "Equipe reunida em atividade educacional",
         legenda: "Registro institucional de atividade educacional",
       },
@@ -275,7 +275,7 @@ export const projetos: Projeto[] = [
     cardSpan: "md:col-span-6",
     cardAspecto: "aspect-[4/3]",
     cardImagem: {
-      src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/formacao-educacional-a-confirmar.jpg",
+      src: "/images/eventos/formacao-educacional-a-confirmar.jpg",
       alt: "Registro de formação educacional",
     },
   },
@@ -306,13 +306,13 @@ export const projetos: Projeto[] = [
     ],
     resultados: [],
     hero: {
-      src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/forum-esportes-bahia-autoridades.jpg",
+      src: "/images/eventos/forum-esportes-bahia-autoridades.jpg",
       alt: "Participantes e autoridades reunidos no Fórum de Esportes da Bahia",
       legenda: "Participantes e autoridades reunidos no Fórum",
     },
     corpo: [
       {
-        src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/forum-esportes-bahia-registro-vertical.jpg",
+        src: "/images/eventos/forum-esportes-bahia-registro-vertical.jpg",
         alt: "Registro do Fórum de Esportes da Bahia",
         legenda: "O Fórum debate o papel do esporte no desenvolvimento do estado",
       },
@@ -322,7 +322,7 @@ export const projetos: Projeto[] = [
     cardSpan: "md:col-span-6",
     cardAspecto: "aspect-[4/3]",
     cardImagem: {
-      src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/forum-esportes-bahia-autoridades.jpg",
+      src: "/images/eventos/forum-esportes-bahia-autoridades.jpg",
       alt: "Participantes e autoridades no Fórum de Esportes da Bahia",
     },
   },
@@ -357,13 +357,13 @@ export const projetos: Projeto[] = [
     ],
     resultados: [],
     hero: {
-      src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/projeto-institucional-a-confirmar.png",
+      src: "/images/eventos/projeto-institucional-a-confirmar.png",
       alt: "Equipe reunida em atividade educacional",
       legenda: "Registro institucional de atividade educacional presente no arquivo de fotos",
     },
     corpo: [
       {
-        src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/formacao-educacional-a-confirmar.jpg",
+        src: "/images/eventos/formacao-educacional-a-confirmar.jpg",
         alt: "Formação educacional com participação de estudantes",
         legenda: "Registro de formação educacional",
       },
@@ -373,7 +373,7 @@ export const projetos: Projeto[] = [
     cardSpan: "md:col-span-4",
     cardAspecto: "aspect-[3/4]",
     cardImagem: {
-      src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/projeto-institucional-a-confirmar.png",
+      src: "/images/eventos/projeto-institucional-a-confirmar.png",
       alt: "Equipe reunida em atividade educacional",
     },
   },
@@ -407,7 +407,7 @@ export const projetos: Projeto[] = [
       { numero: "41", legenda: "cidades brasileiras na rede internacional" },
     ],
     hero: {
-      src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/projeto-institucional-a-confirmar.png",
+      src: "/images/eventos/projeto-institucional-a-confirmar.png",
       alt: "Registro institucional relacionado à atuação educacional",
       legenda: "Registro institucional presente no arquivo de fotos da Educatec",
     },
@@ -422,7 +422,7 @@ export const projetos: Projeto[] = [
     cardSpan: "md:col-span-8",
     cardAspecto: "aspect-[16/9]",
     cardImagem: {
-      src: "https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/projeto-institucional-a-confirmar.png",
+      src: "/images/eventos/projeto-institucional-a-confirmar.png",
       alt: "Registro institucional relacionado à atuação educacional",
     },
   },

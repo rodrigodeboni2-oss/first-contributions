@@ -72,7 +72,7 @@ export default function Servicos() {
           <Reveal className="md:col-span-6" delay={120}>
             <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
               <Image
-                src="https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/minas-urbano-futebol-jovens.jpg"
+                src="/images/eventos/minas-urbano-futebol-jovens.jpg"
                 alt="Atividade esportiva com jovens em etapa do Minas Urbano"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -142,7 +142,7 @@ export default function Servicos() {
             <Reveal className="md:col-span-7" delay={100}>
               <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
                 <Image
-                src="https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/ney-campello/ney-campello-reuniao-institucional.jpg"
+                src="/images/ney-campello/ney-campello-reuniao-institucional.jpg"
                   alt="Reunião de trabalho institucional com a participação da Educatec"
                   fill
                   sizes="(max-width: 768px) 100vw, 60vw"
@@ -195,7 +195,7 @@ export default function Servicos() {
             <Reveal className="order-2 md:order-1 md:col-span-4">
               <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
                 <Image
-                  src="https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/ney-campello/ney-campello-reuniao-tecnica-com-equipe.jpg"
+                  src="/images/ney-campello/ney-campello-reuniao-tecnica-com-equipe.jpg"
                   alt="Reunião técnica institucional"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -303,7 +303,7 @@ export default function Servicos() {
             <Reveal className="md:col-span-7" delay={100}>
               <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
                 <Image
-                  src="https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/ney-campello/ney-campello-retrato-principal.jpg"
+                  src="/images/ney-campello/ney-campello-retrato-principal.jpg"
                   alt="Ney Campello falando ao microfone durante encontro institucional"
                   fill
                   sizes="(max-width: 768px) 100vw, 60vw"
@@ -346,7 +346,7 @@ export default function Servicos() {
           <Reveal className="mt-10" delay={80}>
             <div className="relative aspect-[16/10] overflow-hidden rounded-xl md:aspect-[21/9]">
               <Image
-                src="https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/verao-costa-a-costa-volei-praia.jpg"
+                src="/images/eventos/verao-costa-a-costa-volei-praia.jpg"
                 alt="Atividade esportiva em uma das arenas do Verão Costa a Costa"
                 fill
                 sizes="100vw"
@@ -451,7 +451,7 @@ export default function Servicos() {
                 </div>
                 <div className="relative min-h-72 md:col-span-6">
                   <Image
-                    src="https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/copa-feminina-arena-fonte-nova.png"
+                    src="/images/eventos/copa-feminina-arena-fonte-nova.png"
                     alt="Reunião técnica na Arena Fonte Nova, em Salvador"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
@@ -493,7 +493,7 @@ export default function Servicos() {
       <section className="relative mt-24 md:mt-32">
         <div className="absolute inset-0">
           <Image
-            src="https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/minas-urbano-unidade-movel.png"
+            src="/images/eventos/minas-urbano-unidade-movel.png"
             alt=""
             fill
             sizes="100vw"

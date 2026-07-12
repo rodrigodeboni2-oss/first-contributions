@@ -31,7 +31,7 @@ export default function Projetos() {
         <Reveal className="md:col-span-5" delay={120}>
           <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
             <Image
-              src="https://educatec-jvvgqsglz-myselfandi1.vercel.app/images/eventos/copa-feminina-contagem-regressiva-dique-tororo.png"
+              src="/images/eventos/copa-feminina-contagem-regressiva-dique-tororo.png"
               alt="Contagem regressiva para a Copa do Mundo Feminina FIFA 2027 em Salvador"
               fill
               sizes="(max-width: 768px) 100vw, 40vw"
