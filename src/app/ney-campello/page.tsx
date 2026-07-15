@@ -1,9 +1,367 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
-export const metadata: Metadata = { title: "Ney Jorge Campello | Educatec" };
+export const metadata: Metadata = {
+  title: "Ney Campello | Educatec",
+  description:
+    "Conheça Ney Jorge Campello: professor, gestor público, consultor, escritor e fundador da Educatec.",
+};
 
-export default function NeyCampello() { return <main className="bg-[#faf8f4] text-slate-800"><section className="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-[.8fr_1.2fr] lg:items-center lg:px-10"><div className="relative aspect-[4/5] overflow-hidden rounded-3xl"><Image src="/images/ney-campello/ney-campello-retrato-principal.jpg" alt="Ney Jorge Campello" fill priority className="object-cover" /></div><div><p className="text-sm font-bold uppercase tracking-[.2em] text-amber-700">Liderança empresarial</p><h1 className="mt-4 font-serif text-5xl font-bold text-slate-950 md:text-7xl">Ney Jorge Campello</h1><p className="mt-6 text-xl leading-9 text-slate-600">Educador, gestor público e articulador de projetos nas áreas de educação, esporte, cultura e desenvolvimento institucional.</p><p className="mt-6 leading-8">Sua trajetória reúne experiência em planejamento educacional, gestão pública, preparação de grandes eventos e articulação entre governos, instituições de ensino, entidades empresariais e organizações sociais.</p></div></section>
-  <section className="bg-white py-16"><div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-2 lg:px-10"><div><p className="text-sm font-bold uppercase tracking-widest text-amber-700">Coordenação técnica</p><h2 className="mt-3 font-serif text-3xl font-bold">Planejamento e articulação</h2><p className="mt-5 leading-8 text-slate-600">Reuniões técnicas, coordenação de equipes e construção de soluções com instituições parceiras fazem parte de sua atuação profissional.</p></div><figure><div className="relative aspect-[4/3] overflow-hidden rounded-3xl"><Image src="/images/institucional/ney-reuniao-coordenacao.webp" alt="Ney Campello em reunião de coordenação técnica" fill className="object-cover" /></div><figcaption className="mt-3 text-sm text-slate-500">Reunião de coordenação e articulação técnica</figcaption></figure></div></section>
-  <section className="mx-auto max-w-7xl px-6 py-16 lg:px-10"><p className="text-sm font-bold uppercase tracking-widest text-amber-700">Entrevistas e presença na mídia</p><h2 className="mt-3 font-serif text-3xl font-bold">Experiência compartilhada</h2><div className="mt-8 grid gap-6 md:grid-cols-2"><figure><div className="relative aspect-video overflow-hidden rounded-3xl"><Image src="/images/ney-campello/ney-campello-entrevista-tv.png" alt="Ney Campello em entrevista para televisão" fill className="object-cover" /></div><figcaption className="mt-3 text-sm text-slate-500">Entrevista e presença na mídia</figcaption></figure><figure><div className="relative aspect-video overflow-hidden rounded-3xl"><Image src="/images/ney-campello/ney-campello-entrevista-radio.jpg" alt="Ney Campello durante entrevista em rádio" fill className="object-cover" /></div><figcaption className="mt-3 text-sm text-slate-500">Entrevista em rádio</figcaption></figure></div></section>
-  <section className="bg-slate-950 py-16 text-white"><div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-[.8fr_1.2fr] lg:items-center lg:px-10"><figure><div className="relative aspect-[3/4] overflow-hidden rounded-3xl"><Image src="/images/institucional/ney-via-educacao-poesia.webp" alt="A Via da Educação e da Poesia, de Ney Campello" fill className="object-cover" /></div></figure><div><p className="text-sm font-bold uppercase tracking-widest text-amber-400">Educação, poesia e trajetória intelectual</p><h2 className="mt-4 font-serif text-4xl font-bold">A Via da Educação e da Poesia</h2><p className="mt-6 text-lg leading-8 text-slate-300">A reflexão sobre educação, cultura e poesia integra a produção intelectual de Ney Jorge Campello e sua compreensão da formação humana como processo amplo, conectado ao território e à vida pública.</p></div></div></section></main> }
+const trajetoria = [
+  {
+    periodo: "1983–1988",
+    cargo: "Vereador de Salvador",
+    detalhe: "Eleito em 1982 como o vereador mais jovem entre as capitais brasileiras",
+  },
+  {
+    periodo: "1995–2006",
+    cargo: "Subsecretário de Educação e Cultura de Salvador",
+    detalhe: "Em diferentes períodos",
+  },
+  {
+    periodo: "2006–2007",
+    cargo: "Secretário de Educação e Cultura de Salvador",
+    detalhe: "Premiado 2 anos consecutivos como Personalidade Educacional na Bahia",
+  },
+  {
+    periodo: "2009–2014",
+    cargo: "Secretário de Estado para os Assuntos da Copa do Mundo FIFA 2014",
+    detalhe: "Governo do Estado da Bahia",
+  },
+  {
+    periodo: "2015",
+    cargo: "Secretário de Ações Estratégicas",
+    detalhe: "Prefeitura de Lauro de Freitas",
+  },
+  {
+    periodo: "2017",
+    cargo: "Vice-Presidente Nacional de Agências e Varejo",
+    detalhe: "Empresa Brasileira de Correios e Telégrafos",
+  },
+  {
+    periodo: "2017–2019",
+    cargo: "Superintendente de Educação Básica",
+    detalhe: "Secretaria da Educação do Estado da Bahia",
+  },
+  {
+    periodo: "Atualmente",
+    cargo: "Diretor-Geral da Universidade Aberta",
+    detalhe: "Associação Comercial da Bahia",
+  },
+];
+
+const formacao = [
+  "Mestre em Administração Profissional — UFBA (2000)",
+  "Bacharel em Direito — UFBA (1992)",
+  "Estudos de doutoramento em Administração Pública na Universidad Complutense de Madrid — Diploma de Estudios Avanzados (2003)",
+  "Graduando em Filosofia — Centro Universitário Internacional Uninter",
+];
+
+const galeria = [
+  {
+    src: "/images/ney-campello/ney-campello-retrato-principal.jpg",
+    alt: "Ney Campello falando ao microfone em reunião institucional",
+  },
+  {
+    src: "/images/ney-campello/ney-campello-reuniao-institucional.jpg",
+    alt: "Ney Campello em reunião de trabalho institucional",
+  },
+  {
+    src: "/images/ney-campello/ney-campello-reuniao-tecnica-com-equipe.jpg",
+    alt: "Ney Campello em reunião técnica",
+  },
+  {
+    src: "/images/ney-campello/ney-campello-reuniao-ampliada.jpg",
+    alt: "Reunião ampliada com a participação de Ney Campello",
+  },
+  {
+    src: "/images/ney-campello/ney-campello-entrevista-tv.png",
+    alt: "Ney Campello em entrevista em estúdio de televisão",
+  },
+  {
+    src: "/images/ney-campello/ney-campello-trajetoria-publica.png",
+    alt: "Registro histórico da trajetória pública de Ney Campello",
+  },
+];
+
+export default function NeyCampello() {
+  return (
+    <div className="mx-auto max-w-6xl px-4 py-14">
+      {/* Hero */}
+      <div className="grid items-center gap-10 md:grid-cols-2">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-widest text-brand">
+            Líder empresarial
+          </p>
+          <h1 className="mt-2 font-display text-4xl text-slate-900 md:text-5xl">
+            Ney Jorge Campello
+          </h1>
+          <p className="mt-2 text-lg text-slate-500">
+            Professor, gestor público, consultor, escritor e poeta
+          </p>
+          <p className="mt-6 leading-relaxed text-slate-700">
+            Da Ribeira para a vida pública, da sala de aula para a gestão de
+            grandes projetos, Ney Jorge Campello construiu uma trajetória
+            guiada pela convicção de que educação, cultura e esporte
+            transformam pessoas e territórios. Professor, consultor, gestor
+            público, escritor e poeta, reuniu décadas de experiência em redes
+            educacionais, planejamento, formação e articulação institucional.
+          </p>
+          <p className="mt-4 leading-relaxed text-slate-700">
+            Desde 2007, a Educatec transforma essa experiência em planejamento,
+            consultoria e projetos estruturados para governos, instituições e
+            comunidades.
+          </p>
+        </div>
+        <div className="relative h-72 w-full overflow-hidden rounded-3xl shadow-lg md:h-96">
+          <Image
+            src="/images/ney-campello/ney-campello-retrato-principal.jpg"
+            alt="Ney Jorge Campello falando ao microfone em reunião institucional"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+      </div>
+
+      {/* Trajetória */}
+      <div className="mt-20 grid gap-10 lg:grid-cols-3">
+        <div className="lg:col-span-2">
+          <h2 className="font-display text-3xl text-slate-900">Trajetória</h2>
+          <div className="mt-8 space-y-0">
+            {trajetoria.map((t, i) => (
+              <div key={t.cargo} className="relative flex gap-6 pb-8">
+                <div className="flex flex-col items-center">
+                  <span className="z-10 h-4 w-4 rounded-full border-4 border-brand bg-white" />
+                  {i < trajetoria.length - 1 && (
+                    <span className="w-0.5 flex-1 bg-slate-200" />
+                  )}
+                </div>
+                <div className="-mt-1">
+                  <p className="text-sm font-bold uppercase tracking-wide text-brand">
+                    {t.periodo}
+                  </p>
+                  <p className="font-semibold text-slate-900">{t.cargo}</p>
+                  <p className="text-sm text-slate-600">{t.detalhe}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="space-y-4">
+          <div className="relative h-64 overflow-hidden rounded-2xl shadow-md">
+            <Image
+              src="/images/ney-campello/ney-campello-trajetoria-publica.png"
+              alt="Registro histórico da trajetória pública de Ney Campello"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <p className="text-sm italic text-slate-500">
+            Décadas de vida pública dedicadas à educação, ao esporte e à
+            cultura.
+          </p>
+          <div className="relative h-64 overflow-hidden rounded-2xl shadow-md">
+            <Image
+              src="/images/ney-campello/ney-campello-reuniao-institucional.jpg"
+              alt="Ney Campello em reunião de trabalho institucional"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Atuação institucional */}
+      <h2 className="mt-16 font-display text-3xl text-slate-900">
+        Atuação institucional
+      </h2>
+      <p className="mt-3 max-w-3xl leading-relaxed text-slate-600">
+        Diretor-geral da Universidade Aberta da Associação Comercial da Bahia
+        desde a sua fundação, Ney Campello também atua na articulação de
+        projetos com governos, universidades e entidades esportivas. Na agenda
+        da Copa do Mundo Feminina FIFA 2027, desenvolve atividades por meio de
+        vínculo institucional próprio, preservando com clareza o papel da
+        Educatec na concepção estratégica da proposta.
+      </p>
+      <div className="mt-8 grid gap-6 md:grid-cols-2">
+        <div className="relative h-72 overflow-hidden rounded-2xl shadow-md">
+          <Image
+            src="/images/ney-campello/ney-campello-reuniao-ampliada.jpg"
+            alt="Reunião ampliada com a participação de Ney Campello"
+            fill
+            className="object-cover"
+          />
+        </div>
+        <div className="relative h-72 overflow-hidden rounded-2xl shadow-md">
+          <Image
+            src="/images/ney-campello/ney-campello-reuniao-tecnica-com-equipe.jpg"
+            alt="Ney Campello em reunião técnica"
+            fill
+            className="object-cover"
+          />
+        </div>
+      </div>
+
+      {/* Entrevistas e presença na mídia */}
+      <h2 className="mt-16 font-display text-3xl text-slate-900 md:text-4xl">
+        Entrevistas e presença na mídia
+      </h2>
+      <div className="mt-8 grid gap-8 md:grid-cols-2">
+        {/* Cartão 1 — Let's Go Bahia */}
+        <a
+          href="https://letsgobahia.com.br/noticia/business/da-educacao-e-da-poesia-trilha-que-escolhi"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex flex-col overflow-hidden rounded-xl border border-slate-200 transition-colors duration-200 hover:border-brand"
+        >
+          <div className="relative aspect-[16/9] overflow-hidden">
+            <Image
+              src="/images/ney-campello/ney-campello-reuniao-ampliada.jpg"
+              alt="Ney Campello em pose reflexiva"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="img-zoom object-cover"
+            />
+          </div>
+          <div className="flex flex-1 flex-col p-7">
+            <p className="text-xs font-bold uppercase tracking-widest text-slate-400">
+              Let&apos;s Go Bahia · Perfil autobiográfico
+            </p>
+            <h3 className="mt-3 font-display text-2xl leading-snug text-slate-900">
+              A Via da Educação e da Poesia: a Trilha que Escolhi
+            </h3>
+            <p className="mt-3 flex-1 text-[15px] leading-relaxed text-slate-600">
+              Ney Campello percorre sua formação na educação pública, a entrada
+              na vida política, a experiência em gestão e sua relação com a
+              literatura e a poesia.
+            </p>
+            <span className="mt-5 inline-flex items-center gap-2 font-semibold text-brand">
+              Ler na Let&apos;s Go Bahia
+              <span className="transition-transform duration-200 group-hover:translate-x-1">
+                →
+              </span>
+            </span>
+          </div>
+        </a>
+
+        {/* Cartão 2 — Jornal da Manhã / Globoplay */}
+        <a
+          href="https://globoplay.globo.com/v/7213204/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex flex-col overflow-hidden rounded-xl border border-slate-200 transition-colors duration-200 hover:border-brand"
+        >
+          <div className="relative aspect-[16/9] overflow-hidden">
+            <Image
+              src="/images/ney-campello/ney-campello-entrevista-tv.png"
+              alt="Ney Campello em entrevista ao Jornal da Manhã, em estúdio de televisão"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="img-zoom object-cover"
+            />
+          </div>
+          <div className="flex flex-1 flex-col p-7">
+            <p className="text-xs font-bold uppercase tracking-widest text-slate-400">
+              Jornal da Manhã · Entrevista em TV
+            </p>
+            <h3 className="mt-3 font-display text-2xl leading-snug text-slate-900">
+              Entrevista ao Jornal da Manhã sobre o ordenamento da rede
+              estadual
+            </h3>
+            <p className="mt-3 flex-1 text-[15px] leading-relaxed text-slate-600">
+              Na condição de superintendente da educação, Ney Campello
+              participou do Jornal da Manhã para explicar o processo de
+              ordenamento da rede estadual e a desativação de prédios onde
+              funcionavam algumas unidades escolares.
+            </p>
+            <span className="mt-5 inline-flex items-center gap-2 font-semibold text-brand">
+              Assistir no Globoplay
+              <span className="transition-transform duration-200 group-hover:translate-x-1">
+                →
+              </span>
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <div className="mt-16 grid gap-10 md:grid-cols-2">
+        {/* Formação */}
+        <div>
+          <h2 className="font-display text-3xl text-slate-900">
+            Formação acadêmica
+          </h2>
+          <ul className="mt-6 space-y-3">
+            {formacao.map((f) => (
+              <li key={f} className="flex items-start gap-3 text-slate-700">
+                <span className="mt-1 text-brand">🎓</span>
+                {f}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Escritor */}
+        <div className="rounded-3xl bg-brand-light/70 p-8">
+          <h2 className="font-display text-3xl text-slate-900">
+            O educador poeta
+          </h2>
+          <p className="mt-4 leading-relaxed text-slate-700">
+            Depois dos 60 anos, publicou seu primeiro livro de poemas,{" "}
+            <strong>Tricô</strong>, premiado por uma academia literária
+            paulista. É membro titular da Academia de Letras e Ciências do
+            Grande Oriente do Brasil — Bahia e da Academia Baiana de Cultura.
+          </p>
+          <blockquote className="mt-6 border-l-4 border-brand pl-4 text-lg italic text-slate-700">
+            “Importa tecer, não importa quando.”
+          </blockquote>
+        </div>
+      </div>
+
+      {/* Galeria */}
+      <h2 className="mt-16 font-display text-3xl text-slate-900">Galeria</h2>
+      <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3">
+        {galeria.map((img) => (
+          <div
+            key={img.src}
+            className="relative h-52 overflow-hidden rounded-xl"
+          >
+            <Image
+              src={img.src}
+              alt={img.alt}
+              fill
+              className="object-cover transition duration-300 hover:scale-105"
+            />
+          </div>
+        ))}
+      </div>
+
+      {/* CTA final */}
+      <div className="mt-16 flex flex-col items-center gap-6 rounded-3xl border border-slate-200 p-10 text-center md:flex-row md:text-left">
+        <div className="relative h-40 w-40 shrink-0 overflow-hidden rounded-2xl">
+          <Image
+            src="/images/ney-campello/ney-campello-reuniao-ampliada.jpg"
+            alt="Ney Campello em pose reflexiva"
+            fill
+            className="object-cover"
+          />
+        </div>
+        <div>
+          <h2 className="font-display text-2xl text-slate-900">
+            Experiência a serviço do seu projeto
+          </h2>
+          <p className="mt-2 text-slate-600">
+            A trajetória de Ney Campello e a experiência da Educatec contribuem
+            para transformar ideias em projetos estruturados e executáveis.
+          </p>
+          <a
+            href="https://wa.me/5571999816999"
+            className="mt-4 inline-block rounded-full bg-brand px-6 py-2.5 font-semibold text-white transition hover:bg-brand-dark"
+          >
+            Fale com a Educatec
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
