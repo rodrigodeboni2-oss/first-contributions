@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import ProjetosHorizontal from "@/components/ProjetosHorizontal";
+import { projetos } from "@/lib/projetos";
 
 export const metadata: Metadata = {
   title: "Quem Somos | Educatec",
@@ -29,40 +31,27 @@ const publicos = [
   "Empresas que necessitem de projetos, formação ou eventos",
 ];
 
-const imagensEmpresa = [
+const blocosInstitucionais = [
   {
+    titulo: "Propósito",
+    texto:
+      "Transformar necessidades públicas e institucionais em projetos estruturados, executáveis e socialmente relevantes, utilizando educação, esporte, cultura e gestão como instrumentos de desenvolvimento humano e territorial.",
     src: "/images/eventos/forum-esportes-bahia-autoridades.jpg",
     alt: "Equipe e participantes reunidos em atividade institucional",
-    legenda: "Articulação institucional e desenvolvimento do esporte",
-    figureClass: "md:col-span-7",
-    imageClass: "aspect-[16/10]",
   },
   {
+    titulo: "Missão",
+    texto:
+      "Promover educação, esporte e cultura como dimensões integradas do desenvolvimento, oferecendo planejamento, consultoria, formação e execução de projetos capazes de gerar autonomia, desenvolvimento sustentável e formação integral.",
     src: "/images/quem-somos/grupo-evento-profissional.webp",
     alt: "Grupo reunido em evento profissional",
-    figureClass: "md:col-span-5",
-    imageClass: "aspect-[5/4] md:aspect-auto md:h-full",
   },
   {
+    titulo: "Visão",
+    texto:
+      "Consolidar-se como uma das principais referências da Bahia em consultoria educacional, planejamento institucional e produção de eventos esportivos e culturais.",
     src: "/images/eventos/verao-costa-a-costa-oficial-hero-2024.jpg",
     alt: "Atividade esportiva em arena de evento",
-    legenda: "Produção de eventos esportivos e culturais",
-    figureClass: "md:col-span-5",
-    imageClass: "aspect-[4/3]",
-  },
-  {
-    src: "/images/eventos/copa-feminina-arena-fonte-nova.png",
-    alt: "Reunião técnica na Arena Fonte Nova",
-    legenda: "Planejamento e articulação de grandes agendas",
-    figureClass: "md:col-span-7",
-    imageClass: "aspect-[16/9] md:aspect-auto md:h-full",
-  },
-  {
-    src: "/images/quem-somos/cerimonia-reconhecimento.webp",
-    alt: "Cerimônia institucional de reconhecimento e celebração",
-    figureClass: "md:col-span-12",
-    imageClass: "aspect-[16/7]",
-    objectClass: "object-[center_32%]",
   },
 ];
 
@@ -153,60 +142,34 @@ export default function QuemSomos() {
             </p>
           </div>
 
-          <div className="mt-8 grid gap-5 md:grid-cols-12">
-            {imagensEmpresa.map((imagem) => (
-              <figure
-                key={imagem.src}
-                className={`group flex flex-col ${imagem.figureClass}`}
-              >
-                <div
-                  className={`relative overflow-hidden rounded-[1.5rem_1.5rem_1.5rem_0] bg-slate-100 ${imagem.imageClass}`}
-                >
-                  <Image
-                    src={imagem.src}
-                    alt={imagem.alt}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 60vw"
-                    className={`img-zoom object-cover ${imagem.objectClass ?? "object-center"}`}
-                  />
-                </div>
-                {imagem.legenda ? (
-                  <figcaption className="mt-2 text-xs leading-relaxed text-slate-500">
-                    {imagem.legenda}
-                  </figcaption>
-                ) : null}
-              </figure>
-            ))}
-          </div>
+          <ProjetosHorizontal projetos={projetos} />
         </section>
 
-        <section className="mt-20 grid gap-6 md:grid-cols-3">
-          <div className="rounded-[1.75rem_1.75rem_1.75rem_0] bg-white/85 p-7 shadow-[0_18px_45px_rgba(15,63,101,0.08)] ring-1 ring-sky-100">
-            <h2 className="text-xl font-bold text-brand-dark">Propósito</h2>
-            <p className="mt-3 text-sm leading-relaxed text-slate-700">
-              Transformar necessidades públicas e institucionais em projetos
-              estruturados, executáveis e socialmente relevantes, utilizando
-              educação, esporte, cultura e gestão como instrumentos de
-              desenvolvimento humano e territorial.
-            </p>
-          </div>
-          <div className="rounded-[1.75rem_1.75rem_1.75rem_0] bg-brand-light/70 p-7 shadow-[0_18px_45px_rgba(15,63,101,0.08)] ring-1 ring-white/70">
-            <h2 className="text-xl font-bold text-brand-dark">Missão</h2>
-            <p className="mt-3 text-sm leading-relaxed text-slate-700">
-              Promover educação, esporte e cultura como dimensões integradas do
-              desenvolvimento, oferecendo planejamento, consultoria, formação e
-              execução de projetos capazes de gerar autonomia, desenvolvimento
-              sustentável e formação integral.
-            </p>
-          </div>
-          <div className="rounded-[1.75rem_1.75rem_1.75rem_0] bg-white/85 p-7 shadow-[0_18px_45px_rgba(15,63,101,0.08)] ring-1 ring-sky-100">
-            <h2 className="text-xl font-bold text-brand-dark">Visão</h2>
-            <p className="mt-3 text-sm leading-relaxed text-slate-700">
-              Consolidar-se como uma das principais referências da Bahia em
-              consultoria educacional, planejamento institucional e produção de
-              eventos esportivos e culturais.
-            </p>
-          </div>
+        <section className="mt-20 grid gap-5 md:grid-cols-12">
+          {blocosInstitucionais.map((bloco, index) => (
+            <article
+              key={bloco.titulo}
+              className={`group relative min-h-[330px] overflow-hidden rounded-[1.75rem_1.75rem_1.75rem_0] shadow-[0_18px_45px_rgba(15,63,101,0.18)] ${
+                index === 0 ? "md:col-span-5" : index === 1 ? "md:col-span-7" : "md:col-span-12"
+              }`}
+            >
+              <Image
+                src={bloco.src}
+                alt={bloco.alt}
+                fill
+                sizes="(max-width: 768px) 100vw, 60vw"
+                className="img-zoom object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#063b69]/95 via-[#0d5f9f]/70 to-[#0d5f9f]/20" />
+              <div className="relative flex min-h-[330px] flex-col justify-end p-7 text-white md:p-9">
+                <span aria-hidden="true" className="mb-4 h-1 w-14 rounded-full bg-amber-300" />
+                <h2 className="font-display text-3xl">{bloco.titulo}</h2>
+                <p className="mt-3 max-w-2xl text-sm leading-relaxed text-sky-50 md:text-base">
+                  {bloco.texto}
+                </p>
+              </div>
+            </article>
+          ))}
         </section>
 
         <section className="mt-20 grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
@@ -221,14 +184,34 @@ export default function QuemSomos() {
               ))}
             </ul>
           </div>
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem_2rem_0_2rem] bg-slate-100 shadow-[0_24px_65px_rgba(15,63,101,0.14)]">
-            <Image
-              src="/images/quem-somos/mural-aureo-filho.webp"
-              alt="Equipe reunida diante do mural colorido de Áureo Filho"
-              fill
-              sizes="(max-width: 1024px) 100vw, 45vw"
-              className="object-cover object-center"
-            />
+          <div className="grid grid-cols-2 gap-4">
+            <div className="relative col-span-2 aspect-[16/9] overflow-hidden rounded-[2rem_2rem_0_2rem] bg-slate-100 shadow-[0_24px_65px_rgba(15,63,101,0.14)]">
+              <Image
+                src="/images/eventos/copa-feminina-arena-fonte-nova.png"
+                alt="Reunião técnica na Arena Fonte Nova"
+                fill
+                sizes="(max-width: 1024px) 100vw, 45vw"
+                className="object-cover object-center"
+              />
+            </div>
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem_0_1.5rem_1.5rem] bg-slate-100 shadow-lg">
+              <Image
+                src="/images/quem-somos/cerimonia-reconhecimento.webp"
+                alt="Cerimônia institucional de reconhecimento e celebração"
+                fill
+                sizes="(max-width: 640px) 50vw, 22vw"
+                className="object-cover object-[center_25%]"
+              />
+            </div>
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[0_1.5rem_1.5rem_1.5rem] bg-slate-100 shadow-lg">
+              <Image
+                src="/images/quem-somos/mural-aureo-filho.webp"
+                alt="Equipe reunida diante do mural colorido de Áureo Filho"
+                fill
+                sizes="(max-width: 640px) 50vw, 22vw"
+                className="object-cover object-center"
+              />
+            </div>
           </div>
         </section>
 
