@@ -57,7 +57,7 @@ const blocosInstitucionais = [
 
 export default function QuemSomos() {
   return (
-    <main className="relative overflow-hidden bg-[linear-gradient(180deg,#f5faff_0%,#ffffff_28%,#eef7fc_66%,#ffffff_100%)]">
+    <main className="relative overflow-hidden bg-[linear-gradient(180deg,#f7f7f5_0%,#eef7fc_30%,#ffffff_100%)]">
       <svg
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 h-full w-full text-sky-300/55"
@@ -74,7 +74,8 @@ export default function QuemSomos() {
         />
       </svg>
 
-      <div className="relative mx-auto max-w-6xl px-4 py-14 md:py-20">
+      <div className="relative bg-[linear-gradient(180deg,#d5d5d3_0%,#e4e4e2_38%,#eeeeec_72%,#f7f7f5_100%)]">
+        <div className="mx-auto max-w-6xl px-4 pb-0 pt-14 md:pt-20">
         <section className="grid items-center gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:gap-14">
           <div>
             <div className="flex flex-wrap items-center justify-between gap-6 lg:block">
@@ -171,8 +172,11 @@ export default function QuemSomos() {
             </article>
           ))}
         </section>
+        </div>
+      </div>
 
-        <section className="mt-20 grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+      <div className="relative mx-auto max-w-6xl px-4 pb-14 pt-20 md:pb-20">
+        <section className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
             <h2 className="font-display text-3xl text-slate-900">Valores</h2>
             <ul className="mt-6 grid gap-3 sm:grid-cols-2">

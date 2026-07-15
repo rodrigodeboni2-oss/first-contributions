@@ -2,37 +2,82 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Projeto } from "@/lib/projetos";
 
 export default function ProjetosHorizontal({ projetos }: { projetos: Projeto[] }) {
+  const areaRef = useRef<HTMLDivElement>(null);
   const trilhoRef = useRef<HTMLDivElement>(null);
+  const animacaoRef = useRef<number | null>(null);
+  const destinoRef = useRef(0);
+  const [noInicio, setNoInicio] = useState(true);
+  const [noFim, setNoFim] = useState(false);
 
   useEffect(() => {
+    const area = areaRef.current;
     const trilho = trilhoRef.current;
-    if (!trilho) return;
+    if (!area || !trilho) return;
+
+    const atualizarLimites = () => {
+      setNoInicio(trilho.scrollLeft <= 2);
+      setNoFim(trilho.scrollLeft + trilho.clientWidth >= trilho.scrollWidth - 2);
+    };
+
+    const animarAteDestino = () => {
+      const distancia = destinoRef.current - trilho.scrollLeft;
+      if (Math.abs(distancia) < 0.5) {
+        trilho.scrollLeft = destinoRef.current;
+        animacaoRef.current = null;
+        atualizarLimites();
+        return;
+      }
+
+      trilho.scrollLeft += distancia * 0.24;
+      animacaoRef.current = requestAnimationFrame(animarAteDestino);
+    };
 
     const handleWheel = (event: WheelEvent) => {
       if (event.ctrlKey) return;
 
-      const delta = Math.abs(event.deltaY) >= Math.abs(event.deltaX)
-        ? event.deltaY
-        : event.deltaX;
+      const fator = event.deltaMode === WheelEvent.DOM_DELTA_LINE
+        ? 18
+        : event.deltaMode === WheelEvent.DOM_DELTA_PAGE
+          ? trilho.clientWidth
+          : 1;
+      const deltaVertical = event.deltaY * fator;
+      const deltaHorizontal = event.deltaX * fator;
+      const delta = Math.abs(deltaVertical) > 0.5 ? deltaVertical : deltaHorizontal;
       if (!delta) return;
 
-      const noInicio = trilho.scrollLeft <= 1;
-      const noFim = trilho.scrollLeft + trilho.clientWidth >= trilho.scrollWidth - 1;
-      const podeMover = (delta < 0 && !noInicio) || (delta > 0 && !noFim);
+      const maximo = Math.max(0, trilho.scrollWidth - trilho.clientWidth);
+      const posicaoAtual = trilho.scrollLeft;
+      const podeMover = (delta < 0 && posicaoAtual > 2) || (delta > 0 && posicaoAtual < maximo - 2);
 
       if (!podeMover) return;
 
       event.preventDefault();
-      const multiplicador = event.deltaMode === WheelEvent.DOM_DELTA_LINE ? 18 : 1;
-      trilho.scrollLeft += delta * multiplicador;
+      destinoRef.current = Math.min(
+        maximo,
+        Math.max(0, (animacaoRef.current === null ? posicaoAtual : destinoRef.current) + delta * 1.15),
+      );
+
+      if (animacaoRef.current === null) {
+        animacaoRef.current = requestAnimationFrame(animarAteDestino);
+      }
     };
 
-    trilho.addEventListener("wheel", handleWheel, { passive: false });
-    return () => trilho.removeEventListener("wheel", handleWheel);
+    destinoRef.current = trilho.scrollLeft;
+    atualizarLimites();
+    area.addEventListener("wheel", handleWheel, { passive: false });
+    trilho.addEventListener("scroll", atualizarLimites, { passive: true });
+    window.addEventListener("resize", atualizarLimites);
+
+    return () => {
+      area.removeEventListener("wheel", handleWheel);
+      trilho.removeEventListener("scroll", atualizarLimites);
+      window.removeEventListener("resize", atualizarLimites);
+      if (animacaoRef.current !== null) cancelAnimationFrame(animacaoRef.current);
+    };
   }, []);
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
@@ -48,16 +93,26 @@ export default function ProjetosHorizontal({ projetos }: { projetos: Projeto[] }
     });
   };
 
+  const mascara = noInicio && noFim
+    ? "linear-gradient(to right, #000 0%, #000 100%)"
+    : noInicio
+      ? "linear-gradient(to right, #000 0%, #000 92%, transparent 100%)"
+      : noFim
+        ? "linear-gradient(to right, transparent 0%, #000 8%, #000 100%)"
+        : "linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%)";
+
   return (
-    <div
-      ref={trilhoRef}
-      role="region"
-      aria-label="Projetos da Educatec. Use as setas do teclado ou deslize para navegar."
-      tabIndex={0}
-      onKeyDown={handleKeyDown}
-      className="-mx-4 mt-8 flex snap-x snap-proximity gap-5 overflow-x-auto px-4 py-6 outline-none [overscroll-behavior-inline:contain] [scrollbar-width:none] focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-4 md:-mx-8 md:px-8 [&::-webkit-scrollbar]:hidden"
-    >
-      {projetos.map((projeto) => (
+    <div ref={areaRef} className="relative -mx-4 mt-8 overflow-hidden md:-mx-8">
+      <div
+        ref={trilhoRef}
+        role="region"
+        aria-label="Projetos da Educatec. Use as setas do teclado ou deslize para navegar."
+        tabIndex={0}
+        onKeyDown={handleKeyDown}
+        style={{ maskImage: mascara, WebkitMaskImage: mascara }}
+        className="flex snap-x snap-proximity gap-5 overflow-x-auto px-4 py-6 outline-none [overscroll-behavior-inline:contain] [scrollbar-width:none] focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-4 md:px-8 [&::-webkit-scrollbar]:hidden"
+      >
+        {projetos.map((projeto) => (
         <Link
           key={projeto.slug}
           href={`/projetos/${projeto.slug}`}
@@ -95,8 +150,9 @@ export default function ProjetosHorizontal({ projetos }: { projetos: Projeto[] }
               Ver projeto <span aria-hidden="true">→</span>
             </span>
           </div>
-        </Link>
-      ))}
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }
