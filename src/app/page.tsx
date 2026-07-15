@@ -1,28 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
-const areas = [
-  {
-    title: "Consultoria Educacional",
-    desc: "Planos municipais de educação, diagnósticos, observatórios e monitoramento de indicadores.",
-    icon: "📚",
-  },
-  {
-    title: "Gestão e Desenvolvimento Institucional",
-    desc: "Reestruturação organizacional, governança e articulação entre governos, universidades e escolas.",
-    icon: "🏛️",
-  },
-  {
-    title: "Formação e Desenvolvimento",
-    desc: "Formação de gestores e conselheiros, cursos, oficinas, conferências e palestras.",
-    icon: "🎓",
-  },
-  {
-    title: "Eventos Esportivos, Culturais e Educacionais",
-    desc: "Da concepção à execução: circuitos, clínicas, arenas, fóruns e congressos, com prestação de contas.",
-    icon: "🏅",
-  },
-];
+import AreasAtuacaoMural from "@/components/AreasAtuacaoMural";
 
 const projetos = [
   {
@@ -106,22 +84,7 @@ export default function Home() {
           Atuamos do diagnóstico à entrega: identificamos problemas, concebemos
           projetos, executamos ações e prestamos contas.
         </p>
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {areas.map((area) => (
-            <div
-              key={area.title}
-              className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md"
-            >
-              <div className="text-3xl">{area.icon}</div>
-              <h3 className="mt-4 font-semibold text-slate-900">
-                {area.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                {area.desc}
-              </p>
-            </div>
-          ))}
-        </div>
+        <AreasAtuacaoMural />
         <div className="mt-8 text-center">
           <Link
             href="/servicos"
