@@ -70,9 +70,7 @@ function resetCard(event: PointerEvent<HTMLElement>) {
 
 export default function AreasAtuacaoMural() {
   return (
-    <div className="relative mt-10 overflow-hidden rounded-[2.25rem] bg-gradient-to-br from-brand-dark via-brand to-sky-500 p-3 shadow-xl md:p-6">
-      <div className="pointer-events-none absolute -left-24 top-16 h-56 w-56 rounded-full border border-white/15" />
-      <div className="pointer-events-none absolute -right-16 bottom-10 h-72 w-72 rounded-full border border-white/10" />
+    <div className="relative mt-10">
       <div className="relative grid gap-3 md:grid-cols-12 md:gap-5">
         {areas.map((area) => (
           <article

@@ -78,10 +78,10 @@ export default function Home() {
 
       {/* Áreas de atuação */}
       <section className="mx-auto max-w-6xl px-4 py-16">
-        <h2 className="text-center font-display text-3xl text-slate-900 md:text-4xl">
+        <h2 className="text-center font-display text-3xl text-white md:text-4xl">
           Áreas de atuação
         </h2>
-        <p className="mx-auto mt-3 max-w-2xl text-center text-slate-600">
+        <p className="mx-auto mt-3 max-w-2xl text-center text-white">
           Atuamos do diagnóstico à entrega: identificamos problemas, concebemos
           projetos, executamos ações e prestamos contas.
         </p>
