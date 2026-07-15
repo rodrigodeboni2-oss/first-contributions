@@ -29,8 +29,9 @@ const projetos = [
 export default function Home() {
   return (
     <>
+      <div className="bg-[linear-gradient(145deg,#0d4c82_0%,#1265ab_22%,#9dbbd5_52%,#edf3f8_78%,#ffffff_100%)]">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-brand-dark via-brand to-brand-light/40 text-white">
+      <section className="text-white">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-12 px-4 py-20 md:flex-row md:py-28">
           <div className="flex-1">
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-sky-200">
@@ -128,6 +129,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </div>
 
       {/* Projetos em destaque */}
       <section className="bg-brand-light/60">
