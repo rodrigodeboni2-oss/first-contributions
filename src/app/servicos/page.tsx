@@ -72,8 +72,8 @@ export default function Servicos() {
           <Reveal className="md:col-span-6" delay={120}>
             <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
               <Image
-                src="/images/eventos/minas-urbano-futebol-jovens.jpg"
-                alt="Atividade esportiva com jovens em etapa do Minas Urbano"
+                src="/images/servicos/abertura-equipe-institucional.webp"
+                alt="Equipe reunida em ambiente institucional"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
@@ -81,7 +81,7 @@ export default function Servicos() {
               />
             </div>
             <p className="mt-2 text-xs text-slate-400">
-              Atividade com jovens em etapa do Minas Urbano, em Minas Gerais
+              Equipe reunida em ambiente institucional
             </p>
           </Reveal>
         </div>
@@ -142,15 +142,15 @@ export default function Servicos() {
             <Reveal className="md:col-span-7" delay={100}>
               <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
                 <Image
-                src="/images/ney-campello/ney-campello-reuniao-institucional.jpg"
-                  alt="Reunião de trabalho institucional com a participação da Educatec"
+                  src="/images/servicos/consultoria-articulacao-publica.webp"
+                  alt="Encontro de articulação pública e institucional"
                   fill
                   sizes="(max-width: 768px) 100vw, 60vw"
                   className="object-cover"
                 />
               </div>
               <p className="mt-2 text-xs text-slate-400">
-                Reunião de trabalho institucional
+                Encontro de articulação pública e institucional
               </p>
               <div className="mt-8 grid grid-cols-2 gap-x-8 gap-y-2">
                 {[
@@ -305,15 +305,15 @@ export default function Servicos() {
             <Reveal className="md:col-span-7" delay={100}>
               <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
                 <Image
-                  src="/images/servicos/ney-campello-minas-urbano.jpg"
-                  alt="Ney Campello ao lado de participante durante ação do Minas Urbano"
+                  src="/images/servicos/formacao-educacao-empreendedora.webp"
+                  alt="Equipe reunida em encontro de Educação Empreendedora"
                   fill
                   sizes="(max-width: 768px) 100vw, 60vw"
-                  className="object-cover object-[center_42%]"
+                  className="object-cover"
                 />
               </div>
               <p className="mt-2 text-xs text-slate-400">
-                Ney Campello durante ação do Minas Urbano, em Minas Gerais
+                Encontro de Educação Empreendedora
               </p>
               <blockquote className="mt-8 border-l-2 border-brand pl-6 font-display text-xl leading-snug text-brand-dark md:text-2xl">
                 “Educação e cultura são forças transformadoras.”
@@ -351,15 +351,15 @@ export default function Servicos() {
           <Reveal className="mt-10" delay={80}>
             <div className="relative aspect-[16/10] overflow-hidden rounded-xl md:aspect-[21/9]">
               <Image
-                src="/images/eventos/verao-costa-a-costa-oficial-hero-2024.jpg"
-                alt="Atividade esportiva em uma das arenas do Verão Costa a Costa"
+                src="/images/servicos/eventos-esporte-educacional.webp"
+                alt="Estudantes participando de atividade esportiva e educacional"
                 fill
                 sizes="100vw"
                 className="object-cover"
               />
             </div>
             <p className="mt-2 text-xs text-slate-400">
-              Credenciamento do público em etapa do II Verão Costa a Costa
+              Atividade esportiva e educacional com estudantes
             </p>
           </Reveal>
           <Reveal className="mt-8" delay={120}>
@@ -470,13 +470,10 @@ export default function Servicos() {
           </Reveal>
         </section>
 
-        {/* I. Método */}
-        <section className="pt-24 md:pt-32">
+        {/* I. Etapas */}
+        <section className="pt-12 md:pt-16">
           <Reveal>
-            <h2 className="font-display text-3xl text-slate-900 md:text-5xl">
-              Método de trabalho
-            </h2>
-            <div className="relative mt-12">
+            <div className="relative">
               {/* linha contínua */}
               <div className="absolute left-0 top-4 hidden h-px w-full bg-slate-300 md:block" />
               <ol className="grid gap-8 md:grid-cols-5">
@@ -500,11 +497,11 @@ export default function Servicos() {
       <section className="relative mt-24 md:mt-32">
         <div className="absolute inset-0">
           <Image
-            src="/images/eventos/minas-urbano-unidade-movel.png"
+            src="/images/servicos/cta-articulacao-institucional.webp"
             alt=""
             fill
             sizes="100vw"
-            className="object-cover"
+            className="object-cover object-[center_38%]"
           />
           <div className="absolute inset-0 bg-ink/80" />
         </div>
