@@ -27,9 +27,9 @@ const etapasFormacao = [
 
 export default function Servicos() {
   return (
-    <div>
+    <div className="-mb-20">
       {/* A. Hero editorial */}
-      <section className="mx-auto max-w-6xl px-4 pt-16 md:pt-24">
+      <section className="mx-auto max-w-7xl px-4 pt-12 md:pt-16">
         <div className="grid items-center gap-10 md:grid-cols-12">
           <Reveal className="md:col-span-6">
             <p className="text-sm font-bold uppercase tracking-widest text-brand">
@@ -82,9 +82,9 @@ export default function Servicos() {
       {/* B. Navegação rápida (sticky no desktop) */}
       <nav
         aria-label="Índice de serviços"
-        className="sticky top-[73px] z-40 mt-16 border-y border-slate-200 bg-background/95 backdrop-blur"
+        className="sticky top-[73px] z-40 mt-12 border-y border-slate-200 bg-background/95 backdrop-blur"
       >
-        <div className="mx-auto flex max-w-6xl gap-8 overflow-x-auto px-4 py-4">
+        <div className="mx-auto flex max-w-7xl gap-8 overflow-x-auto px-4 py-4">
           {indice.map((item) => (
             <a
               key={item.href}
@@ -100,9 +100,9 @@ export default function Servicos() {
         </div>
       </nav>
 
-      <div className="mx-auto max-w-6xl px-4">
+      <div className="mx-auto max-w-7xl px-4">
         {/* D. 01 — Consultoria educacional */}
-        <section id="consultoria" className="scroll-mt-36 pt-24 md:pt-32">
+        <section id="consultoria" className="scroll-mt-36 pt-16 md:pt-20">
           <div className="grid gap-10 md:grid-cols-12 md:gap-14">
             <Reveal className="md:col-span-5">
               <p className="font-display text-6xl text-slate-200 md:text-7xl">
@@ -182,16 +182,16 @@ export default function Servicos() {
         </section>
 
         {/* E. 02 — Gestão institucional */}
-        <section id="gestao" className="scroll-mt-36 pt-24 md:pt-32">
-          <div className="grid gap-10 md:grid-cols-12 md:gap-14">
-            <Reveal className="order-2 md:order-1 md:col-span-4">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
+        <section id="gestao" className="scroll-mt-36 pt-16 md:pt-20">
+          <div className="grid items-start gap-10 md:grid-cols-12 md:gap-14">
+            <Reveal className="order-2 md:order-1 md:col-span-6">
+              <div className="relative aspect-[3/2] overflow-hidden rounded-xl">
                 <Image
                   src="/images/ney-campello/ney-campello-reuniao-ampliada.jpg"
                   alt="Ney Campello participando de reunião institucional ampliada"
                   fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover object-center"
                 />
               </div>
               <p className="mt-2 text-xs text-slate-400">
@@ -229,20 +229,24 @@ export default function Servicos() {
                 </Link>
                 .
               </p>
-            </Reveal>
-            <Reveal className="order-3 md:col-span-2" delay={140}>
-              <div className="rounded-xl bg-paper p-6">
+              <div className="mt-7 rounded-xl bg-paper p-6 md:p-7">
                 <p className="text-xs font-bold uppercase tracking-widest text-slate-500">
                   Como atuamos
                 </p>
-                <ul className="mt-4 space-y-3 text-sm text-slate-700">
-                  <li>Planejamento estratégico</li>
-                  <li>Desenho de programas</li>
-                  <li>Governança</li>
-                  <li>Responsabilidades</li>
-                  <li>Fluxos de trabalho</li>
-                  <li>Instrumentos técnicos</li>
-                  <li>Articulação institucional</li>
+                <ul className="mt-4 grid gap-x-8 gap-y-2 text-sm text-slate-700 sm:grid-cols-2">
+                  {[
+                    "Planejamento estratégico",
+                    "Desenho de programas",
+                    "Governança",
+                    "Responsabilidades",
+                    "Fluxos de trabalho",
+                    "Instrumentos técnicos",
+                    "Articulação institucional",
+                  ].map((item) => (
+                    <li key={item} className="border-b border-slate-200 pb-2">
+                      {item}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </Reveal>
@@ -250,21 +254,19 @@ export default function Servicos() {
         </section>
 
         {/* F. 03 — Formação */}
-        <section id="formacao" className="scroll-mt-36 pt-24 md:pt-32">
-          <Reveal>
-            <p className="font-display text-6xl text-slate-200 md:text-7xl">
-              03
-            </p>
-            <p className="mt-2 text-xs font-bold uppercase tracking-widest text-brand">
-              Formação
-            </p>
-            <h2 className="mt-3 max-w-4xl font-display text-3xl leading-tight text-slate-900 md:text-5xl">
-              Formação que parte da realidade de cada equipe
-            </h2>
-          </Reveal>
-          <div className="mt-10 grid gap-10 md:grid-cols-12 md:gap-14">
+        <section id="formacao" className="scroll-mt-36 pt-16 md:pt-20">
+          <div className="grid items-start gap-10 md:grid-cols-12 md:gap-14">
             <Reveal className="md:col-span-5">
-              <p className="max-w-prose leading-relaxed text-slate-600">
+              <p className="font-display text-6xl text-slate-200 md:text-7xl">
+                03
+              </p>
+              <p className="mt-2 text-xs font-bold uppercase tracking-widest text-brand">
+                Formação
+              </p>
+              <h2 className="mt-3 font-display text-3xl leading-tight text-slate-900 md:text-5xl">
+                Formação que parte da realidade de cada equipe
+              </h2>
+              <p className="mt-5 max-w-prose leading-relaxed text-slate-600">
                 A Educatec planeja e realiza cursos, oficinas, encontros e
                 processos formativos voltados a gestores, educadores,
                 conselheiros, equipes técnicas, estudantes e comunidades. O
@@ -276,7 +278,7 @@ export default function Servicos() {
                 educacionais e formações de gestores e conselheiros escolares.
               </p>
               {/* Linha de processo */}
-              <ol className="mt-8 space-y-0">
+              <ol className="mt-7 space-y-0">
                 {etapasFormacao.map((etapa, i) => (
                   <li key={etapa} className="relative flex gap-4 pb-5">
                     <div className="flex flex-col items-center">
@@ -301,13 +303,13 @@ export default function Servicos() {
                   alt="Equipe reunida em encontro de Educação Empreendedora"
                   fill
                   sizes="(max-width: 768px) 100vw, 60vw"
-                  className="object-cover"
+                  className="object-cover object-center"
                 />
               </div>
               <p className="mt-2 text-xs text-slate-400">
                 Encontro de Educação Empreendedora
               </p>
-              <blockquote className="mt-8 border-l-2 border-brand pl-6 font-display text-xl leading-snug text-brand-dark md:text-2xl">
+              <blockquote className="mt-6 border-l-2 border-brand pl-6 font-display text-xl leading-snug text-brand-dark md:text-2xl">
                 “Educação e cultura são forças transformadoras.”
               </blockquote>
               <p className="mt-2 pl-6 text-xs text-slate-400">
@@ -318,7 +320,7 @@ export default function Servicos() {
         </section>
 
         {/* G. 04 — Produção de eventos */}
-        <section id="eventos" className="scroll-mt-36 pt-24 md:pt-32">
+        <section id="eventos" className="scroll-mt-36 pt-16 md:pt-20">
           <Reveal>
             <p className="font-display text-6xl text-slate-200 md:text-7xl">
               04
@@ -326,10 +328,10 @@ export default function Servicos() {
             <p className="mt-2 text-xs font-bold uppercase tracking-widest text-brand">
               Eventos
             </p>
-            <h2 className="mt-3 max-w-4xl font-display text-3xl leading-tight text-slate-900 md:text-5xl">
+            <h2 className="mt-3 max-w-5xl font-display text-3xl leading-tight text-slate-900 md:text-5xl">
               Eventos planejados do primeiro cronograma ao relatório final
             </h2>
-            <p className="mt-5 max-w-prose leading-relaxed text-slate-600">
+            <p className="mt-5 max-w-6xl leading-relaxed text-slate-600 md:text-lg">
               A atuação da Educatec vai além da montagem de estruturas. A
               empresa participa do planejamento, da articulação das etapas, da
               coordenação das equipes, da operação, do atendimento ao público,
@@ -340,21 +342,21 @@ export default function Servicos() {
               definido de acordo com o projeto.
             </p>
           </Reveal>
-          <Reveal className="mt-10" delay={80}>
-            <div className="relative aspect-[16/10] overflow-hidden rounded-xl md:aspect-[21/9]">
+          <Reveal className="mt-8" delay={80}>
+            <div className="relative aspect-[16/9] overflow-hidden rounded-xl">
               <Image
                 src="/images/servicos/eventos-esporte-educacional.webp"
                 alt="Estudantes participando de atividade esportiva e educacional"
                 fill
                 sizes="100vw"
-                className="object-cover"
+                className="object-cover object-center"
               />
             </div>
             <p className="mt-2 text-xs text-slate-400">
               Atividade esportiva e educacional com estudantes
             </p>
           </Reveal>
-          <Reveal className="mt-8" delay={120}>
+          <Reveal className="mt-6" delay={120}>
             <div className="grid gap-px overflow-hidden rounded-xl border border-slate-200 bg-slate-200 md:grid-cols-3">
               {[
                 {
@@ -408,22 +410,20 @@ export default function Servicos() {
         </section>
 
         {/* H. 05 — Coordenação de projetos */}
-        <section id="coordenacao" className="scroll-mt-36 pt-24 md:pt-32">
+        <section id="coordenacao" className="scroll-mt-36 pt-16 md:pt-20">
           <Reveal>
             <div className="overflow-hidden rounded-2xl bg-ink text-white">
               <div className="grid md:grid-cols-12">
-                <div className="p-8 md:col-span-6 md:p-12">
-                  <div className="flex items-center gap-4">
-                    <p className="font-display text-6xl text-white/20 md:text-7xl">
-                      05
-                    </p>
-                    <span className="rounded-full border border-amber-400 px-3 py-1 text-xs font-bold uppercase tracking-wide text-amber-400">
-                      Em andamento
-                    </span>
-                  </div>
+                <div className="p-8 md:col-span-7 md:p-10 lg:p-12">
+                  <p className="font-display text-6xl text-white/20 md:text-7xl">
+                    05
+                  </p>
                   <p className="mt-2 text-xs font-bold uppercase tracking-widest text-sky-300">
                     Articulação
                   </p>
+                  <span className="mt-4 inline-flex rounded-full border border-amber-400 px-3 py-1 text-xs font-bold uppercase tracking-wide text-amber-400">
+                    Em andamento
+                  </span>
                   <h2 className="mt-3 font-display text-3xl leading-tight md:text-4xl">
                     Coordenação de projetos com diferentes instituições e
                     equipes
@@ -448,20 +448,19 @@ export default function Servicos() {
                     </Link>
                   </p>
                 </div>
-                <div className="relative min-h-72 md:col-span-6">
+                <div className="relative aspect-[4/3] md:col-span-5 md:aspect-auto md:min-h-full">
                   <Image
                     src="/images/eventos/copa-feminina-arena-fonte-nova.png"
                     alt="Reunião técnica na Arena Fonte Nova, em Salvador"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover"
+                    className="object-cover object-[center_68%]"
                   />
                 </div>
               </div>
             </div>
           </Reveal>
         </section>
-
       </div>
     </div>
   );
