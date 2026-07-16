@@ -13,18 +13,21 @@ export default function CopaFemininaProject({
   relacionado: Projeto | null;
 }) {
   return (
-    <article className="overflow-x-clip bg-[linear-gradient(180deg,#eef6fc_0%,#ffffff_34%,#f5f9fc_72%,#ffffff_100%)] pb-16 md:pb-20">
+    <article className="overflow-x-clip bg-[linear-gradient(180deg,#eef6fc_0%,#ffffff_34%,#f5f9fc_72%,#ffffff_100%)] pb-8 md:pb-10">
       <header className="mx-auto max-w-7xl px-4 pt-8 md:pt-12">
         <div className="grid items-stretch gap-5 lg:grid-cols-12">
-          <Reveal className="lg:col-span-7">
-            <CopaProjectImage
-              src={`${imageBase}/capa-contagem-regressiva-2027.webp`}
-              alt="Grupo reunido no evento de contagem regressiva de um ano para a Copa do Mundo Feminina FIFA 2027, em Salvador"
-              sizes="(max-width: 1024px) 100vw, 58vw"
-              className="aspect-[16/9] h-full min-h-64"
-              imageClassName="object-cover"
-              priority
-            />
+          <Reveal className="min-w-0 lg:col-span-7">
+            <div data-testid="copa-hero-image" className="min-w-0">
+              <CopaProjectImage
+                src={`${imageBase}/capa-contagem-regressiva-2027.webp`}
+                alt="Grupo reunido no evento de contagem regressiva de um ano para a Copa do Mundo Feminina FIFA 2027, em Salvador"
+                sizes="(max-width: 1024px) 100vw, 58vw"
+                className="aspect-[16/9] w-full min-w-0"
+                imageClassName="object-contain"
+                priority
+                preserveFullImage
+              />
+            </div>
             {projeto.hero?.legenda && (
               <p className="mt-3 text-xs leading-relaxed text-slate-500">
                 {projeto.hero.legenda}
@@ -32,8 +35,11 @@ export default function CopaFemininaProject({
             )}
           </Reveal>
 
-          <Reveal className="lg:col-span-5" delay={100}>
-            <div className="flex h-full flex-col justify-between rounded-2xl bg-ink p-7 text-white shadow-[0_20px_60px_rgba(15,23,42,0.18)] md:p-10">
+          <Reveal className="min-w-0 lg:col-span-5" delay={100}>
+            <div
+              data-testid="copa-hero-panel"
+              className="flex h-full flex-col justify-between rounded-2xl bg-ink p-7 text-white shadow-[0_20px_60px_rgba(15,23,42,0.18)] md:p-10"
+            >
               <div>
                 <div className="flex flex-wrap items-center gap-3">
                   <span className="rounded-full border border-amber-400 px-3 py-1 text-xs font-bold uppercase tracking-wide text-amber-300">
@@ -79,30 +85,47 @@ export default function CopaFemininaProject({
         </Reveal>
       </header>
 
-      <section className="mx-auto mt-16 max-w-6xl px-4 md:mt-24">
-        <div className="grid gap-10 lg:grid-cols-12 lg:gap-14">
-          <Reveal className="lg:col-span-7">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand">
-              Salvador, cidade-sede
-            </p>
-            <h2 className="mt-3 font-display text-3xl leading-tight text-slate-900 md:text-5xl">
-              Contexto e preparação
-            </h2>
-            <div className="mt-7 grid gap-5 md:grid-cols-2">
-              {[
-                projeto.contexto[0],
-                projeto.contexto[1],
-                projeto.contexto[3],
-              ].map((paragrafo) => (
-                <p
-                  key={paragrafo.slice(0, 44)}
-                  className="text-[15px] leading-relaxed text-slate-700"
-                >
-                  {paragrafo}
-                </p>
-              ))}
-            </div>
-          </Reveal>
+      <section className="mx-auto mt-14 max-w-6xl px-4 md:mt-20">
+        <div className="grid gap-6 lg:grid-cols-12">
+          <div className="space-y-6 lg:col-span-7">
+            <Reveal>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand">
+                Salvador, cidade-sede
+              </p>
+              <h2 className="mt-3 font-display text-3xl leading-tight text-slate-900 md:text-5xl">
+                Contexto e preparação
+              </h2>
+              <div className="mt-7 grid gap-5 md:grid-cols-2">
+                {projeto.contexto.map((paragrafo) => (
+                  <p
+                    key={paragrafo.slice(0, 44)}
+                    className="text-[15px] leading-relaxed text-slate-700"
+                  >
+                    {paragrafo}
+                  </p>
+                ))}
+              </div>
+            </Reveal>
+
+            <Reveal delay={60}>
+              <div className="rounded-2xl bg-white p-7 shadow-[0_18px_50px_rgba(15,23,42,0.08)] md:p-9">
+                <h3 className="font-display text-2xl text-slate-900 md:text-3xl">
+                  Papel e responsabilidades
+                </h3>
+                <ul className="mt-6 grid gap-3 md:grid-cols-2 md:gap-x-8">
+                  {projeto.responsabilidades.map((responsabilidade) => (
+                    <li
+                      key={responsabilidade}
+                      className="flex items-start gap-3 border-b border-slate-100 pb-3 text-sm leading-relaxed text-slate-700"
+                    >
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400" />
+                      {responsabilidade}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+          </div>
 
           <Reveal className="lg:col-span-5" delay={100}>
             <div className="lg:sticky lg:top-28">
@@ -110,7 +133,7 @@ export default function CopaFemininaProject({
                 src={`${imageBase}/arena-fonte-nova-grupo.webp`}
                 alt="Grupo de mulheres reunido no gramado da Arena Fonte Nova durante agenda de preparação para 2027"
                 sizes="(max-width: 1024px) 100vw, 42vw"
-                className="aspect-[3/4]"
+                className="aspect-[9/16] w-full"
                 imageClassName="object-contain"
                 preserveFullImage
               />
@@ -120,57 +143,9 @@ export default function CopaFemininaProject({
             </div>
           </Reveal>
         </div>
-      </section>
 
-      <section className="mx-auto mt-16 max-w-6xl px-4 md:mt-24">
-        <Reveal>
-          <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
-            <div>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand">
-                Preparação e articulação
-              </p>
-              <h2 className="mt-3 font-display text-3xl text-slate-900 md:text-5xl">
-                Da proposta às agendas técnicas
-              </h2>
-            </div>
-            <p className="max-w-md text-sm leading-relaxed text-slate-600">
-              Responsabilidades e atividades apresentadas lado a lado para
-              aproximar cada registro de seu contexto.
-            </p>
-          </div>
-        </Reveal>
-
-        <div className="mt-10 grid gap-6 lg:grid-cols-12">
-          <Reveal className="lg:col-span-5">
-            <CopaProjectImage
-              src={`${imageBase}/arena-fonte-nova-liderancas.webp`}
-              alt="Grupo de lideranças femininas reunido na Arena Fonte Nova"
-              sizes="(max-width: 1024px) 100vw, 42vw"
-              className="aspect-[3/4]"
-              imageClassName="object-contain"
-              preserveFullImage
-            />
-          </Reveal>
-          <Reveal className="lg:col-span-7" delay={80}>
-            <div className="h-full rounded-2xl bg-white p-7 shadow-[0_18px_50px_rgba(15,23,42,0.08)] md:p-10">
-              <h3 className="font-display text-2xl text-slate-900 md:text-3xl">
-                Papel e responsabilidades
-              </h3>
-              <ul className="mt-6 grid gap-3 md:grid-cols-2 md:gap-x-8">
-                {projeto.responsabilidades.map((responsabilidade) => (
-                  <li
-                    key={responsabilidade}
-                    className="flex items-start gap-3 border-b border-slate-100 pb-3 text-sm leading-relaxed text-slate-700"
-                  >
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400" />
-                    {responsabilidade}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </Reveal>
-
-          <Reveal className="lg:col-span-7" delay={60}>
+        <div className="mt-6 grid gap-6 lg:grid-cols-12">
+          <Reveal className="lg:col-span-7">
             <div className="h-full rounded-2xl bg-brand-dark p-7 text-white shadow-[0_18px_50px_rgba(15,23,42,0.12)] md:p-10">
               <h3 className="font-display text-2xl md:text-3xl">
                 O que foi realizado
@@ -189,12 +164,12 @@ export default function CopaFemininaProject({
               </ol>
             </div>
           </Reveal>
-          <Reveal className="lg:col-span-5" delay={120}>
+          <Reveal className="lg:col-span-5" delay={80}>
             <CopaProjectImage
               src={`${imageBase}/politicas-esportivas-dialogo.webp`}
               alt="Representantes reunidos no Fórum de Esportes da Bahia durante agenda de diálogo sobre políticas esportivas"
               sizes="(max-width: 1024px) 100vw, 42vw"
-              className="aspect-[3/4]"
+              className="aspect-[9/16] w-full"
               imageClassName="object-contain"
               preserveFullImage
             />
@@ -203,7 +178,10 @@ export default function CopaFemininaProject({
       </section>
 
       {projeto.blocoExtra && (
-        <section className="mx-auto mt-16 max-w-6xl px-4 md:mt-24">
+        <section
+          data-testid="forum-noticia-copa"
+          className="mx-auto mt-12 max-w-6xl px-4 md:mt-16"
+        >
           <Reveal>
             <div className="grid gap-6 lg:grid-cols-12">
               <div className="lg:col-span-5">
@@ -211,7 +189,7 @@ export default function CopaFemininaProject({
                   src={`${imageBase}/forum-esportes-bahia.webp`}
                   alt="Ney Campello e participantes do Fórum de Esportes da Bahia"
                   sizes="(max-width: 1024px) 100vw, 42vw"
-                  className="aspect-[3/4]"
+                  className="aspect-[9/16] w-full"
                   imageClassName="object-contain"
                   preserveFullImage
                 />
@@ -227,36 +205,10 @@ export default function CopaFemininaProject({
               </div>
             </div>
           </Reveal>
-
-          <Reveal className="mt-6" delay={80}>
-            <div className="grid gap-6 lg:grid-cols-12">
-              <div className="flex flex-col justify-center rounded-2xl bg-[linear-gradient(135deg,#0c5a93,#12386b)] p-7 text-white lg:col-span-5 md:p-10">
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-sky-200">
-                  Mobilização da Bahia
-                </p>
-                <h3 className="mt-4 font-display text-3xl leading-tight">
-                  Articulação entre lideranças e agendas esportivas
-                </h3>
-                <p className="mt-5 text-sm leading-relaxed text-sky-50">
-                  {projeto.contexto[2]}
-                </p>
-              </div>
-              <div className="lg:col-span-7">
-                <CopaProjectImage
-                  src={`${imageBase}/bahia-destaque-esporte.webp`}
-                  alt="Lideranças reunidas no Fórum de Esportes da Bahia"
-                  sizes="(max-width: 1024px) 100vw, 58vw"
-                  className="aspect-[4/3] lg:aspect-[16/10]"
-                  imageClassName="object-contain"
-                  preserveFullImage
-                />
-              </div>
-            </div>
-          </Reveal>
         </section>
       )}
 
-      <section className="mx-auto mt-16 max-w-6xl px-4 md:mt-20">
+      <section className="mx-auto mt-12 max-w-6xl px-4 md:mt-14">
         <Reveal>
           <div className="border-y border-slate-200 py-8">
             <p className="text-xs font-bold uppercase tracking-widest text-slate-400">

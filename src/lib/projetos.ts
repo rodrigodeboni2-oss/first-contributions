@@ -89,10 +89,6 @@ export const projetos: Projeto[] = [
         legenda: "Agenda na Arena Fonte Nova, palco dos jogos em Salvador",
       },
       {
-        src: "/images/projetos/copa-feminina-2027/arena-fonte-nova-liderancas.webp",
-        alt: "Grupo de lideranças femininas reunido na Arena Fonte Nova",
-      },
-      {
         src: "/images/projetos/copa-feminina-2027/politicas-esportivas-dialogo.webp",
         alt: "Representantes reunidos durante agenda de diálogo sobre políticas esportivas",
       },
@@ -100,14 +96,10 @@ export const projetos: Projeto[] = [
         src: "/images/projetos/copa-feminina-2027/forum-esportes-bahia.webp",
         alt: "Ney Campello e participantes do Fórum de Esportes da Bahia",
       },
-      {
-        src: "/images/projetos/copa-feminina-2027/bahia-destaque-esporte.webp",
-        alt: "Lideranças reunidas no Fórum de Esportes da Bahia",
-      },
     ],
     instituicoes:
       "Governo do Estado da Bahia · GECOPA · Arena Fonte Nova · Instituto vinculado à Universidade do Paraná",
-    relacionado: "forum-esportes-bahia",
+    relacionado: "verao-costa-a-costa",
     blocoExtra: {
       titulo: "Ney Campello participa do Fórum de Esportes da Bahia",
       texto:
@@ -294,54 +286,6 @@ export const projetos: Projeto[] = [
     cardImagem: {
       src: "/images/eventos/formacao-educacional-a-confirmar.jpg",
       alt: "Registro de formação educacional",
-    },
-  },
-  {
-    slug: "forum-esportes-bahia",
-    titulo: "Ney Campello no Fórum de Esportes da Bahia",
-    tituloCurto: "Fórum de Esportes da Bahia",
-    categorias: ["Esporte", "Gestão"],
-    status: "Realizado",
-    local: "Bahia",
-    periodo: "—",
-    area: "Articulação e políticas públicas",
-    papel: "Participação de Ney Campello na condição de convidado",
-    resumo:
-      "Ney Campello foi convidado a participar do Fórum de Esportes da Bahia no contexto das agendas relacionadas à Copa do Mundo Feminina FIFA 2027.",
-    contexto: [
-      "O Fórum de Esportes da Bahia reúne gestores, atletas, entidades esportivas e autoridades para debater políticas públicas e o desenvolvimento do esporte no estado.",
-      "A participação de Ney Campello ocorreu na condição de convidado e integra o conjunto de agendas institucionais acompanhadas dentro do projeto da Copa.",
-      "A presença no Fórum também permitiu compartilhar experiências acumuladas durante a preparação de Salvador para a Copa do Mundo FIFA 2014 e contribuir para os debates sobre os desafios e as oportunidades da competição feminina de 2027.",
-    ],
-    fraseDestaque:
-      "O esporte avança quando quem decide, quem ensina e quem joga sentam à mesma mesa.",
-    responsabilidades: [
-      "Participação como convidado nos debates",
-      "Compartilhamento da experiência acumulada na preparação da Copa de 2014",
-    ],
-    realizado: [
-      "Participação no Fórum ao lado de gestores, autoridades, atletas e representantes de entidades esportivas",
-    ],
-    resultados: [],
-    hero: {
-      src: "/images/eventos/forum-esportes-bahia-autoridades.jpg",
-      alt: "Participantes e autoridades reunidos no Fórum de Esportes da Bahia",
-      legenda: "Participantes e autoridades reunidos no Fórum",
-    },
-    corpo: [
-      {
-        src: "/images/eventos/forum-esportes-bahia-registro-vertical.jpg",
-        alt: "Registro do Fórum de Esportes da Bahia",
-        legenda: "O Fórum debate o papel do esporte no desenvolvimento do estado",
-      },
-    ],
-    instituicoes: "Entidades esportivas e gestores públicos da Bahia",
-    relacionado: "copa-feminina-2027",
-    cardSpan: "md:col-span-6",
-    cardAspecto: "aspect-[4/3]",
-    cardImagem: {
-      src: "/images/eventos/forum-esportes-bahia-autoridades.jpg",
-      alt: "Participantes e autoridades no Fórum de Esportes da Bahia",
     },
   },
   {
