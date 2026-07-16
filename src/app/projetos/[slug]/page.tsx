@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Reveal from "@/components/Reveal";
 import CopaFemininaProject from "@/components/CopaFemininaProject";
+import TourBahiaProject from "@/components/TourBahiaProject";
 import { getProjeto, projetos } from "@/lib/projetos";
 
 export function generateStaticParams() {
@@ -38,6 +39,15 @@ export default async function ProjetoPage({
   if (projeto.slug === "copa-feminina-2027") {
     return (
       <CopaFemininaProject
+        projeto={projeto}
+        relacionado={relacionado ?? null}
+      />
+    );
+  }
+
+  if (projeto.slug === "tour-bahia") {
+    return (
+      <TourBahiaProject
         projeto={projeto}
         relacionado={relacionado ?? null}
       />
