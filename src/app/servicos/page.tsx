@@ -25,17 +25,9 @@ const etapasFormacao = [
   "Avaliação e acompanhamento",
 ];
 
-const metodo = [
-  { numero: "01", nome: "Diagnóstico" },
-  { numero: "02", nome: "Concepção" },
-  { numero: "03", nome: "Governança" },
-  { numero: "04", nome: "Execução" },
-  { numero: "05", nome: "Avaliação" },
-];
-
 export default function Servicos() {
   return (
-    <div className="pb-24">
+    <div>
       {/* A. Hero editorial */}
       <section className="mx-auto max-w-6xl px-4 pt-16 md:pt-24">
         <div className="grid items-center gap-10 md:grid-cols-12">
@@ -470,65 +462,7 @@ export default function Servicos() {
           </Reveal>
         </section>
 
-        {/* I. Etapas */}
-        <section className="pt-12 md:pt-16">
-          <Reveal>
-            <div className="relative">
-              {/* linha contínua */}
-              <div className="absolute left-0 top-4 hidden h-px w-full bg-slate-300 md:block" />
-              <ol className="grid gap-8 md:grid-cols-5">
-                {metodo.map((m) => (
-                  <li key={m.numero} className="relative">
-                    <span className="relative z-10 inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand text-xs font-bold text-white">
-                      {m.numero}
-                    </span>
-                    <p className="mt-3 font-display text-xl text-slate-900">
-                      {m.nome}
-                    </p>
-                  </li>
-                ))}
-              </ol>
-            </div>
-          </Reveal>
-        </section>
       </div>
-
-      {/* J. CTA final */}
-      <section className="relative mt-24 md:mt-32">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/servicos/cta-articulacao-institucional.webp"
-            alt=""
-            fill
-            sizes="100vw"
-            className="object-cover object-[center_38%]"
-          />
-          <div className="absolute inset-0 bg-ink/80" />
-        </div>
-        <div className="relative mx-auto max-w-6xl px-4 py-24 text-center text-white md:py-32">
-          <h2 className="mx-auto max-w-3xl font-display text-3xl leading-tight md:text-5xl">
-            Qual projeto sua instituição precisa colocar em prática?
-          </h2>
-          <p className="mx-auto mt-5 max-w-xl text-slate-300">
-            Conte o desafio. A Educatec pode ajudar a estruturar o caminho,
-            reunir os participantes e acompanhar a execução.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link
-              href="/contato"
-              className="rounded-full bg-white px-7 py-3 font-semibold text-ink transition hover:bg-slate-200"
-            >
-              Solicitar proposta
-            </Link>
-            <a
-              href="https://wa.me/5571999816999"
-              className="rounded-full border-2 border-white px-7 py-3 font-semibold text-white transition hover:bg-white/10"
-            >
-              Falar pelo WhatsApp
-            </a>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

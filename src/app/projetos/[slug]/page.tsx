@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Reveal from "@/components/Reveal";
+import CopaFemininaProject from "@/components/CopaFemininaProject";
 import { getProjeto, projetos } from "@/lib/projetos";
 
 export function generateStaticParams() {
@@ -33,6 +34,16 @@ export default async function ProjetoPage({
   if (!projeto) notFound();
 
   const relacionado = getProjeto(projeto.relacionado);
+
+  if (projeto.slug === "copa-feminina-2027") {
+    return (
+      <CopaFemininaProject
+        projeto={projeto}
+        relacionado={relacionado ?? null}
+      />
+    );
+  }
+
   const [imagemDois, imagemTres] = projeto.corpo;
   const totalImagens = (projeto.hero ? 1 : 0) + projeto.corpo.length;
   const paginaCompacta = totalImagens <= 2;

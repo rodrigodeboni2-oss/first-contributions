@@ -77,16 +77,32 @@ export const projetos: Projeto[] = [
     ],
     resultados: [],
     hero: {
-      src: "/images/eventos/copa-feminina-contagem-regressiva-dique-tororo.png",
-      alt: "Evento de contagem regressiva de 1 ano para a Copa do Mundo Feminina FIFA 2027, em Salvador",
+      src: "/images/projetos/copa-feminina-2027/capa-contagem-regressiva-2027.webp",
+      alt: "Grupo reunido no evento de contagem regressiva de 1 ano para a Copa do Mundo Feminina FIFA 2027, em Salvador",
       legenda:
         "Contagem regressiva de 1 ano para a Copa, com a campanha \"As Mulheres Mudam o Jogo\" — Salvador/BA",
     },
     corpo: [
       {
-        src: "/images/eventos/copa-feminina-arena-fonte-nova.png",
-        alt: "Grupo em reunião técnica na Arena Fonte Nova, em Salvador",
-        legenda: "Reunião técnica na Arena Fonte Nova, palco dos jogos em Salvador",
+        src: "/images/projetos/copa-feminina-2027/arena-fonte-nova-grupo.webp",
+        alt: "Grupo de mulheres reunido no gramado da Arena Fonte Nova",
+        legenda: "Agenda na Arena Fonte Nova, palco dos jogos em Salvador",
+      },
+      {
+        src: "/images/projetos/copa-feminina-2027/arena-fonte-nova-liderancas.webp",
+        alt: "Grupo de lideranças femininas reunido na Arena Fonte Nova",
+      },
+      {
+        src: "/images/projetos/copa-feminina-2027/politicas-esportivas-dialogo.webp",
+        alt: "Representantes reunidos durante agenda de diálogo sobre políticas esportivas",
+      },
+      {
+        src: "/images/projetos/copa-feminina-2027/forum-esportes-bahia.webp",
+        alt: "Ney Campello e participantes do Fórum de Esportes da Bahia",
+      },
+      {
+        src: "/images/projetos/copa-feminina-2027/bahia-destaque-esporte.webp",
+        alt: "Lideranças reunidas no Fórum de Esportes da Bahia",
       },
     ],
     instituicoes:
