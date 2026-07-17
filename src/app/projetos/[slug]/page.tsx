@@ -5,6 +5,9 @@ import { notFound } from "next/navigation";
 import Reveal from "@/components/Reveal";
 import CopaFemininaProject from "@/components/CopaFemininaProject";
 import TourBahiaProject from "@/components/TourBahiaProject";
+import ObservatorioProjeto from "@/components/ObservatorioProjeto";
+import CidadeEducadoraProjeto from "@/components/CidadeEducadoraProjeto";
+import VeraoCostaProjeto from "@/components/VeraoCostaProjeto";
 import { getProjeto, projetos } from "@/lib/projetos";
 
 export function generateStaticParams() {
@@ -48,6 +51,33 @@ export default async function ProjetoPage({
   if (projeto.slug === "tour-bahia") {
     return (
       <TourBahiaProject
+        projeto={projeto}
+        relacionado={relacionado ?? null}
+      />
+    );
+  }
+
+  if (projeto.slug === "observatorio-educacional") {
+    return (
+      <ObservatorioProjeto
+        projeto={projeto}
+        relacionado={relacionado ?? null}
+      />
+    );
+  }
+
+  if (projeto.slug === "ipecaeta-cidade-educadora") {
+    return (
+      <CidadeEducadoraProjeto
+        projeto={projeto}
+        relacionado={relacionado ?? null}
+      />
+    );
+  }
+
+  if (projeto.slug === "verao-costa-a-costa") {
+    return (
+      <VeraoCostaProjeto
         projeto={projeto}
         relacionado={relacionado ?? null}
       />

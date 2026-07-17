@@ -374,9 +374,9 @@ export const projetos: Projeto[] = [
       { numero: "Única", legenda: "entre os 417 municípios baianos integrante dessas redes" },
     ],
     hero: {
-      src: "/images/projetos/ipecaeta/ipecaeta-vista-panoramica-4k.png",
-      alt: "Vista panorâmica do município de Ipecaetá, na Bahia",
-      legenda: "Vista panorâmica de Ipecaetá — imagem da Prefeitura Municipal",
+      src: "/images/projetos/cidade-educadora/ce-cerimonia-reconhecimento.webp",
+      alt: "Entrega do certificado de reconhecimento da rede de Cidades Educadoras a representantes de Ipecaetá",
+      legenda: "Entrega do certificado de reconhecimento da rede de Cidades Educadoras",
     },
     corpo: [],
     instituicoes:
@@ -390,8 +390,8 @@ export const projetos: Projeto[] = [
     cardSpan: "md:col-span-8",
     cardAspecto: "aspect-[16/9]",
     cardImagem: {
-      src: "/images/projetos/ipecaeta/ipecaeta-vista-panoramica-4k.png",
-      alt: "Vista panorâmica do município de Ipecaetá, na Bahia",
+      src: "/images/projetos/cidade-educadora/ce-selfie-sala-aula.webp",
+      alt: "Registro com educadores em sala de aula durante o trabalho de mobilização",
     },
   },
 ];

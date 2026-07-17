@@ -78,3 +78,156 @@ body {
     transform: none;
   }
 }
+
+/* ============================================================
+   Observatório Educacional — identidade e fundo próprios
+   (classes exclusivas .obs-*; não afetam outras páginas)
+   ============================================================ */
+.obs-page {
+  background:
+    radial-gradient(120% 55% at 82% 0%, rgba(53, 196, 212, 0.18), transparent 60%),
+    linear-gradient(
+      180deg,
+      #0b3a66 0%,
+      #0d4c82 5%,
+      #2c76ac 13%,
+      #a9cde9 25%,
+      #eef5fb 38%,
+      #faf8f4 54%,
+      #eaf2fa 70%,
+      #15558c 88%,
+      #0c477e 100%
+    );
+}
+
+/* rede de dados / território — linhas e pontos decorativos */
+.obs-net line {
+  stroke: currentColor;
+  stroke-width: 1;
+  opacity: 0.4;
+}
+.obs-net .obs-node {
+  fill: currentColor;
+}
+.obs-net .obs-node--amber {
+  fill: #f5b301;
+}
+.obs-net .obs-node--turq {
+  fill: #35c4d4;
+}
+
+/* pontos que surgem progressivamente ao entrar na viewport */
+.obs-appear {
+  opacity: 0;
+  transform: scale(0.7);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+.is-visible .obs-appear {
+  opacity: 1;
+  transform: none;
+}
+
+/* linha fina de conexão nos itens de estrutura */
+.obs-connector::before {
+  content: "";
+  position: absolute;
+  left: 0.9rem;
+  top: 2.4rem;
+  bottom: -1.4rem;
+  width: 1px;
+  background: linear-gradient(180deg, rgba(53, 196, 212, 0.5), transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .obs-appear {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ============================================================
+   Cidade Educadora — identidade e fundo próprios
+   (classes exclusivas .ce-*; não afetam outras páginas)
+   ============================================================ */
+.ce-page {
+  background: linear-gradient(
+    180deg,
+    #f6f9f4 0%,
+    #eef5fb 14%,
+    #faf8f4 30%,
+    #eef7f0 46%,
+    #ffffff 60%,
+    #eef5fb 74%,
+    #0f4e86 90%,
+    #0b3a66 100%
+  );
+}
+
+/* faixa profunda do conceito */
+.ce-deep {
+  background:
+    radial-gradient(90% 120% at 8% 0%, rgba(58, 176, 118, 0.25), transparent 55%),
+    radial-gradient(90% 120% at 95% 100%, rgba(245, 179, 1, 0.18), transparent 55%),
+    linear-gradient(135deg, #0b3a66 0%, #0d4c82 55%, #14609e 100%);
+}
+
+/* círculos concêntricos — a cidade que educa em ondas */
+.ce-rings circle {
+  fill: none;
+  stroke: currentColor;
+  opacity: 0.5;
+}
+.ce-rings .ce-dot {
+  fill: currentColor;
+  stroke: none;
+  opacity: 1;
+}
+.ce-dot--green { fill: #3ab076; }
+.ce-dot--amber { fill: #f5b301; }
+.ce-dot--red { fill: #e2554d; }
+.ce-dot--turq { fill: #35c4d4; }
+
+/* ============================================================
+   II Verão Costa a Costa — identidade e fundo próprios
+   (classes exclusivas .vcc-*; não afetam outras páginas)
+   ============================================================ */
+.vcc-page {
+  background: linear-gradient(
+    180deg,
+    #cfeef7 0%,
+    #e9f7fb 10%,
+    #faf8f4 24%,
+    #fdf6e3 38%,
+    #ffffff 52%,
+    #e9f7fb 66%,
+    #7fd4e5 80%,
+    #0d7ea8 92%,
+    #0a5f86 100%
+  );
+}
+
+/* faixa profunda de destaque — mar ao entardecer */
+.vcc-deep {
+  background:
+    radial-gradient(90% 130% at 90% 0%, rgba(245, 179, 1, 0.22), transparent 55%),
+    linear-gradient(135deg, #0a5f86 0%, #0d7ea8 55%, #12a0c4 100%);
+}
+
+/* linha da costa — ondulação com as etapas do circuito */
+.vcc-coast path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.2;
+  stroke-linecap: round;
+  opacity: 0.5;
+}
+.vcc-coast .vcc-dot {
+  stroke: none;
+  opacity: 1;
+}
+.vcc-dot--amber { fill: #f5b301; }
+.vcc-dot--turq { fill: #35c4d4; }
+.vcc-dot--white { fill: #ffffff; }
