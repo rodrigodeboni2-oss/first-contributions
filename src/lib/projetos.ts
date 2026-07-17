@@ -284,8 +284,8 @@ export const projetos: Projeto[] = [
     cardSpan: "md:col-span-6",
     cardAspecto: "aspect-[4/3]",
     cardImagem: {
-      src: "/images/eventos/formacao-educacional-a-confirmar.jpg",
-      alt: "Registro de formação educacional",
+      src: "/images/projetos/tour-bahia/editorial/abertura-clinica-esportiva.webp",
+      alt: "Estudantes participam de clínica esportiva do Tour Bahia em uma quadra escolar",
     },
   },
   {
@@ -392,6 +392,56 @@ export const projetos: Projeto[] = [
     cardImagem: {
       src: "/images/projetos/cidade-educadora/ce-selfie-sala-aula.webp",
       alt: "Registro com educadores em sala de aula durante o trabalho de mobilização",
+    },
+  },
+  {
+    slug: "universidade-aberta-acb",
+    titulo: "Universidade Aberta da Associação Comercial da Bahia",
+    tituloCurto: "Universidade Aberta da Associação Comercial",
+    categorias: ["Educação", "Gestão"],
+    status: "Em andamento",
+    local: "Salvador, Bahia",
+    periodo: "Desde dezembro de 2024",
+    area: "Educação executiva",
+    papel:
+      "Concepção, estruturação, planejamento institucional e direção acadêmica",
+    resumo:
+      "A Educatec foi contratada pela Fundação Paulo Cavalcante para conceber, estruturar e acompanhar a implantação da Universidade Aberta da Associação Comercial da Bahia — educação executiva, inovação, articulação institucional e formação de lideranças empresariais.",
+    contexto: [
+      "A Universidade Aberta nasce como um ambiente permanente de formação voltado ao desenvolvimento econômico, à inovação e à qualificação de lideranças empresariais.",
+      "A Educatec foi responsável pela concepção da proposta acadêmica, pela estruturação institucional do projeto e pela organização do modelo de funcionamento da Universidade Aberta.",
+      "Desde dezembro de 2024, o professor Ney Campello exerce a função de diretor-geral da Universidade Aberta da Associação Comercial da Bahia.",
+    ],
+    fraseDestaque:
+      "Educação, inovação e desenvolvimento institucional no coração empresarial da Bahia.",
+    responsabilidades: [
+      "Concepção da proposta acadêmica",
+      "Estruturação institucional do projeto",
+      "Organização do modelo de funcionamento",
+      "Planejamento estratégico e reuniões técnicas",
+      "Articulação entre empresas, universidades e poder público",
+      "Direção acadêmica, com Ney Campello como diretor-geral",
+    ],
+    realizado: [
+      "Concepção e estruturação da Universidade Aberta",
+      "Direção-geral desde a fundação, em dezembro de 2024",
+      "Encontros, reuniões e atividades institucionais de consolidação da proposta",
+    ],
+    resultados: [],
+    hero: {
+      src: "/images/projetos/universidade-aberta/acb-fachada-palacio.webp",
+      alt: "Fachada do palácio histórico da Associação Comercial da Bahia",
+      legenda: "O palácio histórico da Associação Comercial da Bahia",
+    },
+    corpo: [],
+    instituicoes:
+      "Fundação Paulo Cavalcante · Associação Comercial da Bahia",
+    relacionado: "ipecaeta-cidade-educadora",
+    cardSpan: "md:col-span-6",
+    cardAspecto: "aspect-[4/3]",
+    cardImagem: {
+      src: "/images/projetos/universidade-aberta/acb-fachada-palacio.webp",
+      alt: "Fachada do palácio histórico da Associação Comercial da Bahia",
     },
   },
 ];

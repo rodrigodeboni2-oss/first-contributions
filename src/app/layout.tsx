@@ -92,7 +92,7 @@ export default function RootLayout({
 
         <main className="flex-1">{children}</main>
 
-        <footer className="mt-20 bg-slate-900 text-slate-300">
+        <footer className="bg-slate-900 text-slate-300">
           <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 md:grid-cols-3">
             <div>
               <Image

@@ -21,7 +21,7 @@ const projetos = [
     titulo: "Tour Bahia — Esporte Educacional",
     resumo:
       "Desenvolvimento e organização das etapas em parceria, com 6.688 estudantes e atletas atendidos.",
-    imagem: "/images/projetos/tour-bahia/tour-bahia-esporte-educacional.webp",
+    imagem: "/images/projetos/tour-bahia/editorial/abertura-clinica-esportiva.webp",
     href: "/projetos/tour-bahia",
   },
 ];
