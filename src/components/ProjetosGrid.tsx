@@ -35,10 +35,10 @@ export default function ProjetosGrid({ projetos }: { projetos: Projeto[] }) {
   const destaque = comImagem[ativo];
 
   return (
-    <div className="rounded-[2rem] bg-[linear-gradient(160deg,#0d4c82_0%,#1265ab_30%,#5f96c4_62%,#e8f1f9_100%)] p-4 shadow-[0_30px_80px_rgba(13,76,130,0.25)] sm:p-6 md:p-8">
+    <div className="w-full">
       {/* ===== Destaque rotativo ===== */}
       <div
-        className="group/destaque relative overflow-hidden rounded-3xl"
+        className="group/destaque relative overflow-hidden rounded-3xl shadow-[0_24px_60px_rgba(5,35,62,0.28)]"
         onMouseEnter={() => setPausado(true)}
         onMouseLeave={() => setPausado(false)}
         onFocus={() => setPausado(true)}
@@ -49,7 +49,7 @@ export default function ProjetosGrid({ projetos }: { projetos: Projeto[] }) {
           aria-label={`Ver projeto: ${destaque.titulo}`}
           className="block"
         >
-          <div className="relative aspect-[16/10] w-full md:aspect-[21/9]">
+          <div className="relative aspect-[16/10] w-full md:aspect-[2/1]">
             {comImagem.map((p, i) => (
               <Image
                 key={p.slug}
