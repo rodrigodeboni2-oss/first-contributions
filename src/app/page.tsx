@@ -1,30 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import AreasAtuacaoMural from "@/components/AreasAtuacaoMural";
-
-const projetos = [
-  {
-    titulo: "II Verão Costa a Costa",
-    resumo:
-      "Participação na coordenação, organização e produção de uma das etapas do circuito esportivo e cultural.",
-    imagem: "/images/eventos/verao-costa-a-costa-oficial-hero-2024.jpg",
-    href: "/projetos/verao-costa-a-costa",
-  },
-  {
-    titulo: "Minas Urbano",
-    resumo:
-      "Coordenação do projeto durante os três primeiros meses, com atuação do professor Ney Campello em parceria.",
-    imagem: "/images/eventos/minas-urbano-abertura.png",
-    href: "/projetos/minas-urbano",
-  },
-  {
-    titulo: "Tour Bahia — Esporte Educacional",
-    resumo:
-      "Desenvolvimento e organização das etapas em parceria, com 6.688 estudantes e atletas atendidos.",
-    imagem: "/images/projetos/tour-bahia/editorial/abertura-clinica-esportiva.webp",
-    href: "/projetos/tour-bahia",
-  },
-];
+import EducatecEmAcao from "@/components/EducatecEmAcao";
 
 export default function Home() {
   return (
@@ -131,56 +108,12 @@ export default function Home() {
       </section>
       </div>
 
-      {/* Projetos em destaque */}
-      <section className="bg-brand-light/60">
-        <div className="mx-auto max-w-6xl px-4 py-16">
-          <h2 className="text-center font-display text-3xl text-slate-900 md:text-4xl">
-            Projetos em destaque
-          </h2>
-          <p className="mx-auto mt-3 max-w-2xl text-center text-slate-600">
-            Experiências em educação, gestão, esporte e desenvolvimento
-            territorial realizadas na Bahia e em Minas Gerais.
-          </p>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {projetos.map((p) => (
-              <Link
-                key={p.titulo}
-                href={p.href}
-                className="group overflow-hidden rounded-2xl bg-white shadow-sm transition hover:shadow-lg"
-              >
-                <div className="relative h-48 w-full overflow-hidden">
-                  {p.imagem ? (
-                    <Image
-                      src={p.imagem}
-                      alt={p.titulo}
-                      fill
-                      className="object-cover transition duration-300 group-hover:scale-105"
-                    />
-                  ) : (
-                    <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-brand-dark to-brand-light text-6xl">
-                      🏀
-                    </div>
-                  )}
-                </div>
-                <div className="p-6">
-                  <h3 className="font-semibold text-slate-900">{p.titulo}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                    {p.resumo}
-                  </p>
-                </div>
-              </Link>
-            ))}
-          </div>
-          <div className="mt-8 text-center">
-            <Link
-              href="/projetos"
-              className="font-semibold text-brand hover:underline"
-            >
-              Ver o portfólio completo →
-            </Link>
-          </div>
+      {/* Educatec em ação */}
+      <div className="bg-[linear-gradient(180deg,#d5d5d3_0%,#e4e4e2_38%,#eeeeec_72%,#f7f7f5_100%)]">
+        <div className="mx-auto max-w-6xl px-4 pb-16 pt-px md:pb-20">
+          <EducatecEmAcao />
         </div>
-      </section>
+      </div>
 
       {/* Fundador */}
       <section className="mx-auto max-w-6xl px-4 py-16">
