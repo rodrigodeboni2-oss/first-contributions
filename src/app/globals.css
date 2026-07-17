@@ -231,3 +231,96 @@ body {
 .vcc-dot--amber { fill: #f5b301; }
 .vcc-dot--turq { fill: #35c4d4; }
 .vcc-dot--white { fill: #ffffff; }
+
+/* ============================================================
+   Minas Urbano — identidade e fundo próprios
+   (classes exclusivas .mu-*; não afetam outras páginas)
+   ============================================================ */
+.mu-page {
+  background: linear-gradient(
+    180deg,
+    #e8edf0 0%,
+    #f7f5ef 18%,
+    #ffffff 38%,
+    #eef3f6 58%,
+    #f8f5ed 74%,
+    #123f68 90%,
+    #082d4f 100%
+  );
+}
+
+.mu-hero {
+  background:
+    radial-gradient(90% 120% at 100% 0%, rgba(240, 151, 45, 0.2), transparent 48%),
+    linear-gradient(145deg, #dfe6ea 0%, #f5f3ec 48%, #d8e6ef 100%);
+}
+
+.mu-hero-panel {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0.025)),
+    linear-gradient(145deg, #082d4f 0%, #0d4c82 58%, #1265ab 100%);
+  box-shadow: 0 24px 70px rgba(8, 45, 79, 0.24);
+}
+
+.mu-facts {
+  background: rgba(14, 73, 121, 0.16);
+  box-shadow: 0 18px 45px rgba(30, 64, 90, 0.1);
+}
+
+.mu-team-band {
+  background:
+    linear-gradient(90deg, rgba(240, 151, 45, 0.07) 1px, transparent 1px),
+    linear-gradient(rgba(18, 101, 171, 0.06) 1px, transparent 1px),
+    linear-gradient(145deg, #e8edf0 0%, #f8f5ed 56%, #e5edf3 100%);
+  background-size: 72px 72px, 72px 72px, auto;
+}
+
+.mu-route path {
+  stroke: currentColor;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.mu-route circle {
+  fill: #f0972d;
+  stroke: #ffffff;
+  stroke-width: 1.5;
+}
+
+.mu-image {
+  transition: transform 420ms ease;
+}
+
+.group:hover .mu-image {
+  transform: scale(1.025);
+}
+
+.mu-deep {
+  background:
+    radial-gradient(100% 150% at 100% 0%, rgba(240, 151, 45, 0.2), transparent 50%),
+    linear-gradient(135deg, #082d4f 0%, #0b3a66 44%, #0d4c82 100%);
+}
+
+.mu-responsibility {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.mu-closing {
+  background: linear-gradient(180deg, #0d4c82 0%, #082d4f 100%);
+}
+
+.mu-closing-link {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mu-image,
+  .group:hover .mu-image {
+    transition: none;
+    transform: none;
+  }
+}

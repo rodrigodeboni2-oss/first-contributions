@@ -8,6 +8,7 @@ import TourBahiaProject from "@/components/TourBahiaProject";
 import ObservatorioProjeto from "@/components/ObservatorioProjeto";
 import CidadeEducadoraProjeto from "@/components/CidadeEducadoraProjeto";
 import VeraoCostaProjeto from "@/components/VeraoCostaProjeto";
+import MinasUrbanoProjeto from "@/components/MinasUrbanoProjeto";
 import { getProjeto, projetos } from "@/lib/projetos";
 
 export function generateStaticParams() {
@@ -78,6 +79,15 @@ export default async function ProjetoPage({
   if (projeto.slug === "verao-costa-a-costa") {
     return (
       <VeraoCostaProjeto
+        projeto={projeto}
+        relacionado={relacionado ?? null}
+      />
+    );
+  }
+
+  if (projeto.slug === "minas-urbano") {
+    return (
+      <MinasUrbanoProjeto
         projeto={projeto}
         relacionado={relacionado ?? null}
       />

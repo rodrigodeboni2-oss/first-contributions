@@ -338,8 +338,8 @@ export const projetos: Projeto[] = [
     cardSpan: "md:col-span-4",
     cardAspecto: "aspect-[3/4]",
     cardImagem: {
-      src: "/images/eventos/projeto-institucional-a-confirmar.png",
-      alt: "Equipe reunida em atividade educacional",
+      src: "/images/projetos/observatorio/obs-grupo-oficina.webp",
+      alt: "Participantes reunidos na oficina de apresentação do Observatório Educacional",
     },
   },
   {
