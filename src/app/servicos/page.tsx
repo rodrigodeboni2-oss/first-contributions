@@ -27,18 +27,34 @@ const etapasFormacao = [
 
 export default function Servicos() {
   return (
-    <div className="-mb-20">
+    <main className="relative overflow-hidden bg-[linear-gradient(180deg,#d8e7f3_0%,#eef5fa_18%,#ffffff_48%,#edf5fa_76%,#d4e5f2_100%)]">
+      <svg
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 h-full w-full text-sky-300/35"
+        viewBox="0 0 100 1000"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M96 12 C90 110 98 180 93 270 S98 430 92 540 S98 720 91 988"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="0.55"
+          strokeLinecap="round"
+          vectorEffect="non-scaling-stroke"
+        />
+      </svg>
+
       {/* A. Hero editorial */}
-      <section className="mx-auto max-w-7xl px-4 pt-12 md:pt-16">
-        <div className="grid items-center gap-10 md:grid-cols-12">
-          <Reveal className="md:col-span-6">
-            <p className="text-sm font-bold uppercase tracking-widest text-brand">
+      <section className="relative bg-[linear-gradient(145deg,#0b3a66_0%,#1265ab_58%,#8db4d4_100%)] text-white">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 md:grid-cols-12 md:py-24">
+          <Reveal className="md:col-span-7">
+            <p className="text-sm font-bold uppercase tracking-widest text-sky-200">
               O que fazemos
             </p>
-            <h1 className="mt-4 font-display text-4xl leading-[1.05] text-slate-900 md:text-6xl">
+            <h1 className="mt-4 font-display text-4xl leading-[1.05] text-white md:text-6xl">
               Do diagnóstico à execução, projetos que funcionam na prática.
             </h1>
-            <p className="mt-6 max-w-prose text-lg leading-relaxed text-slate-600">
+            <p className="mt-6 max-w-prose text-lg leading-relaxed text-sky-50">
               A Educatec trabalha com governos, instituições, escolas, empresas
               e organizações sociais na criação, estruturação e execução de
               projetos. A atuação pode começar no diagnóstico, passar pelo
@@ -49,30 +65,30 @@ export default function Servicos() {
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="#consultoria"
-                className="rounded-full bg-brand px-6 py-3 font-semibold text-white transition hover:bg-brand-dark"
+                className="rounded-full bg-white px-6 py-3 font-semibold text-brand transition hover:bg-sky-100"
               >
                 Conheça os serviços
               </a>
               <Link
                 href="/contato"
-                className="rounded-full border border-slate-300 px-6 py-3 font-semibold text-slate-700 transition hover:border-brand hover:text-brand"
+                className="rounded-full border border-white/75 px-6 py-3 font-semibold text-white transition hover:bg-white/10"
               >
                 Fale com a Educatec
               </Link>
             </div>
           </Reveal>
-          <Reveal className="md:col-span-6" delay={120}>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
+          <Reveal className="md:col-span-5" delay={120}>
+            <div className="relative min-h-[390px] overflow-hidden rounded-[2rem_2rem_0_2rem] shadow-[0_28px_70px_rgba(4,31,57,0.3)] md:min-h-[540px]">
               <Image
                 src="/images/servicos/abertura-equipe-institucional.webp"
                 alt="Equipe reunida em ambiente institucional"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
+                className="object-cover object-center"
                 priority
               />
             </div>
-            <p className="mt-2 text-xs text-slate-400">
+            <p className="mt-3 text-xs text-sky-100/75">
               Equipe reunida em ambiente institucional
             </p>
           </Reveal>
@@ -82,7 +98,7 @@ export default function Servicos() {
       {/* B. Navegação rápida (sticky no desktop) */}
       <nav
         aria-label="Índice de serviços"
-        className="sticky top-[73px] z-40 mt-12 border-y border-slate-200 bg-background/95 backdrop-blur"
+        className="sticky top-[73px] z-40 border-y border-white/70 bg-white/90 shadow-[0_10px_30px_rgba(13,76,130,0.08)] backdrop-blur-md"
       >
         <div className="mx-auto flex max-w-7xl gap-8 overflow-x-auto px-4 py-4">
           {indice.map((item) => (
@@ -100,12 +116,12 @@ export default function Servicos() {
         </div>
       </nav>
 
-      <div className="mx-auto max-w-7xl px-4">
+      <div className="relative mx-auto max-w-6xl px-4 pb-20 md:pb-28">
         {/* D. 01 — Consultoria educacional */}
-        <section id="consultoria" className="scroll-mt-36 pt-16 md:pt-20">
-          <div className="grid gap-10 md:grid-cols-12 md:gap-14">
+        <section id="consultoria" className="scroll-mt-36 pt-14 md:pt-20">
+          <div className="grid gap-10 rounded-[2rem_2rem_2rem_0] bg-white/90 p-6 shadow-[0_24px_65px_rgba(15,63,101,0.12)] ring-1 ring-white md:grid-cols-12 md:gap-14 md:p-10">
             <Reveal className="md:col-span-5">
-              <p className="font-display text-6xl text-slate-200 md:text-7xl">
+              <p className="font-display text-6xl text-sky-100 md:text-7xl">
                 01
               </p>
               <p className="mt-2 text-xs font-bold uppercase tracking-widest text-brand">
@@ -132,7 +148,7 @@ export default function Servicos() {
               </p>
             </Reveal>
             <Reveal className="md:col-span-7" delay={100}>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-[1.75rem_1.75rem_0_1.75rem] shadow-[0_20px_50px_rgba(15,63,101,0.16)]">
                 <Image
                   src="/images/servicos/consultoria-articulacao-publica.webp"
                   alt="Encontro de articulação pública e institucional"
@@ -183,9 +199,9 @@ export default function Servicos() {
 
         {/* E. 02 — Gestão institucional */}
         <section id="gestao" className="scroll-mt-36 pt-16 md:pt-20">
-          <div className="grid items-start gap-10 md:grid-cols-12 md:gap-14">
+          <div className="grid items-center gap-10 rounded-[2rem_0_2rem_2rem] bg-[#e7f1f8]/95 p-6 shadow-[0_24px_65px_rgba(15,63,101,0.1)] ring-1 ring-white md:grid-cols-12 md:gap-14 md:p-10">
             <Reveal className="order-2 md:order-1 md:col-span-6">
-              <div className="relative aspect-[3/2] overflow-hidden rounded-xl">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem_0_1.75rem_1.75rem] shadow-[0_20px_50px_rgba(15,63,101,0.18)] md:aspect-[3/4]">
                 <Image
                   src="/images/ney-campello/ney-campello-reuniao-ampliada.jpg"
                   alt="Ney Campello participando de reunião institucional ampliada"
@@ -199,7 +215,7 @@ export default function Servicos() {
               </p>
             </Reveal>
             <Reveal className="order-1 md:order-2 md:col-span-6" delay={80}>
-              <p className="font-display text-6xl text-slate-200 md:text-7xl">
+              <p className="font-display text-6xl text-white md:text-7xl">
                 02
               </p>
               <p className="mt-2 text-xs font-bold uppercase tracking-widest text-brand">
@@ -229,7 +245,7 @@ export default function Servicos() {
                 </Link>
                 .
               </p>
-              <div className="mt-7 rounded-xl bg-paper p-6 md:p-7">
+              <div className="mt-7 rounded-2xl bg-white/80 p-6 shadow-sm ring-1 ring-sky-100 md:p-7">
                 <p className="text-xs font-bold uppercase tracking-widest text-slate-500">
                   Como atuamos
                 </p>
@@ -255,9 +271,9 @@ export default function Servicos() {
 
         {/* F. 03 — Formação */}
         <section id="formacao" className="scroll-mt-36 pt-16 md:pt-20">
-          <div className="grid items-start gap-10 md:grid-cols-12 md:gap-14">
+          <div className="grid items-center gap-10 rounded-[2rem_2rem_2rem_0] bg-white/90 p-6 shadow-[0_24px_65px_rgba(15,63,101,0.12)] ring-1 ring-white md:grid-cols-12 md:gap-14 md:p-10">
             <Reveal className="md:col-span-5">
-              <p className="font-display text-6xl text-slate-200 md:text-7xl">
+              <p className="font-display text-6xl text-sky-100 md:text-7xl">
                 03
               </p>
               <p className="mt-2 text-xs font-bold uppercase tracking-widest text-brand">
@@ -297,7 +313,7 @@ export default function Servicos() {
               </ol>
             </Reveal>
             <Reveal className="md:col-span-7" delay={100}>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-[1.75rem_1.75rem_0_1.75rem] shadow-[0_20px_50px_rgba(15,63,101,0.16)]">
                 <Image
                   src="/images/servicos/formacao-educacao-empreendedora.webp"
                   alt="Equipe reunida em encontro de Educação Empreendedora"
@@ -321,43 +337,46 @@ export default function Servicos() {
 
         {/* G. 04 — Produção de eventos */}
         <section id="eventos" className="scroll-mt-36 pt-16 md:pt-20">
-          <Reveal>
-            <p className="font-display text-6xl text-slate-200 md:text-7xl">
-              04
-            </p>
-            <p className="mt-2 text-xs font-bold uppercase tracking-widest text-brand">
-              Eventos
-            </p>
-            <h2 className="mt-3 max-w-5xl font-display text-3xl leading-tight text-slate-900 md:text-5xl">
-              Eventos planejados do primeiro cronograma ao relatório final
-            </h2>
-            <p className="mt-5 max-w-6xl leading-relaxed text-slate-600 md:text-lg">
-              A atuação da Educatec vai além da montagem de estruturas. A
-              empresa participa do planejamento, da articulação das etapas, da
-              coordenação das equipes, da operação, do atendimento ao público,
-              do monitoramento e da documentação dos resultados. As ações podem
-              ser desenvolvidas diretamente pela Educatec ou em parceria com
-              governos, confederações, federações, universidades, institutos e
-              empresas especializadas, com o escopo de cada participante
-              definido de acordo com o projeto.
-            </p>
-          </Reveal>
-          <Reveal className="mt-8" delay={80}>
-            <div className="relative aspect-[16/9] overflow-hidden rounded-xl">
-              <Image
-                src="/images/servicos/eventos-esporte-educacional.webp"
-                alt="Estudantes participando de atividade esportiva e educacional"
-                fill
-                sizes="100vw"
-                className="object-cover object-center"
-              />
+          <div className="overflow-hidden rounded-[2rem_2rem_2rem_0] bg-[linear-gradient(145deg,#0b355d_0%,#0d4c82_52%,#1265ab_100%)] p-6 text-white shadow-[0_28px_70px_rgba(8,45,77,0.24)] md:p-10">
+            <div className="grid items-center gap-10 md:grid-cols-12 md:gap-12">
+              <Reveal className="md:col-span-6">
+                <p className="font-display text-6xl text-white/20 md:text-7xl">
+                  04
+                </p>
+                <p className="mt-2 text-xs font-bold uppercase tracking-widest text-sky-200">
+                  Eventos
+                </p>
+                <h2 className="mt-3 font-display text-3xl leading-tight text-white md:text-5xl">
+                  Eventos planejados do primeiro cronograma ao relatório final
+                </h2>
+                <p className="mt-5 leading-relaxed text-sky-50 md:text-lg">
+                  A atuação da Educatec vai além da montagem de estruturas. A
+                  empresa participa do planejamento, da articulação das etapas,
+                  da coordenação das equipes, da operação, do atendimento ao público,
+                  do monitoramento e da documentação dos resultados. As ações podem
+                  ser desenvolvidas diretamente pela Educatec ou em parceria com
+                  governos, confederações, federações, universidades, institutos e
+                  empresas especializadas, com o escopo de cada participante
+                  definido de acordo com o projeto.
+                </p>
+              </Reveal>
+              <Reveal className="md:col-span-6" delay={80}>
+                <div className="relative aspect-[4/3] overflow-hidden rounded-[1.75rem_1.75rem_0_1.75rem] shadow-[0_22px_55px_rgba(3,24,43,0.35)]">
+                  <Image
+                    src="/images/servicos/eventos-esporte-educacional.webp"
+                    alt="Estudantes participando de atividade esportiva e educacional"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover object-center"
+                  />
+                </div>
+                <p className="mt-3 text-xs text-sky-100/70">
+                  Atividade esportiva e educacional com estudantes
+                </p>
+              </Reveal>
             </div>
-            <p className="mt-2 text-xs text-slate-400">
-              Atividade esportiva e educacional com estudantes
-            </p>
-          </Reveal>
-          <Reveal className="mt-6" delay={120}>
-            <div className="grid gap-px overflow-hidden rounded-xl border border-slate-200 bg-slate-200 md:grid-cols-3">
+            <Reveal className="mt-8" delay={120}>
+            <div className="grid gap-px overflow-hidden rounded-2xl bg-white/20 ring-1 ring-white/15 md:grid-cols-3">
               {[
                 {
                   fase: "Antes",
@@ -375,44 +394,45 @@ export default function Servicos() {
                     "Monitoramento · registro · relatórios · resultados · prestação de contas",
                 },
               ].map((b) => (
-                <div key={b.fase} className="bg-background p-7">
-                  <p className="font-display text-xl text-brand">{b.fase}</p>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                <div key={b.fase} className="bg-white/10 p-7 backdrop-blur-sm">
+                  <p className="font-display text-xl text-amber-300">{b.fase}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-sky-50">
                     {b.itens}
                   </p>
                 </div>
               ))}
             </div>
-            <p className="mt-6 text-sm text-slate-500">
+            <p className="mt-6 text-sm text-sky-100/80">
               Projetos relacionados:{" "}
               <Link
                 href="/projetos/verao-costa-a-costa"
-                className="link-editorial font-semibold text-brand"
+                className="link-editorial font-semibold text-amber-300"
               >
                 II Verão Costa a Costa
               </Link>
               ,{" "}
               <Link
                 href="/projetos/tour-bahia"
-                className="link-editorial font-semibold text-brand"
+                className="link-editorial font-semibold text-amber-300"
               >
                 Tour Bahia
               </Link>{" "}
               e{" "}
               <Link
                 href="/projetos/minas-urbano"
-                className="link-editorial font-semibold text-brand"
+                className="link-editorial font-semibold text-amber-300"
               >
                 Minas Urbano
               </Link>
             </p>
           </Reveal>
+          </div>
         </section>
 
         {/* H. 05 — Coordenação de projetos */}
         <section id="coordenacao" className="scroll-mt-36 pt-16 md:pt-20">
           <Reveal>
-            <div className="overflow-hidden rounded-2xl bg-ink text-white">
+            <div className="overflow-hidden rounded-[2rem_0_2rem_2rem] bg-[linear-gradient(145deg,#152433_0%,#0c3154_100%)] text-white shadow-[0_28px_70px_rgba(8,35,60,0.24)]">
               <div className="grid md:grid-cols-12">
                 <div className="p-8 md:col-span-7 md:p-10 lg:p-12">
                   <p className="font-display text-6xl text-white/20 md:text-7xl">
@@ -454,7 +474,7 @@ export default function Servicos() {
                     alt="Reunião técnica na Arena Fonte Nova, em Salvador"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover object-[center_68%]"
+                    className="object-cover object-[center_60%]"
                   />
                 </div>
               </div>
@@ -462,6 +482,6 @@ export default function Servicos() {
           </Reveal>
         </section>
       </div>
-    </div>
+    </main>
   );
 }
