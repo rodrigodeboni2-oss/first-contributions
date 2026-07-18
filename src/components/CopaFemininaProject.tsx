@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Projeto } from "@/lib/projetos";
 import CopaProjectImage from "@/components/CopaProjectImage";
 import Reveal from "@/components/Reveal";
+import ProjectContactCta from "@/components/ProjectContactCta";
 
 const imageBase = "/images/projetos/copa-feminina-2027";
 
@@ -220,7 +221,7 @@ export default function CopaFemininaProject({
           </div>
         </Reveal>
 
-        <div className="mt-6 grid gap-6 lg:grid-cols-2">
+        <div className="mt-6">
           {relacionado && (
             <Reveal>
               <Link
@@ -245,33 +246,15 @@ export default function CopaFemininaProject({
             </Reveal>
           )}
 
-          <Reveal delay={80}>
-            <div className="flex h-full flex-col justify-between gap-7 rounded-2xl bg-ink p-7 text-white">
-              <div>
-                <h2 className="font-display text-2xl md:text-3xl">
-                  Um projeto assim faz sentido para a sua instituição?
-                </h2>
-                <p className="mt-2 text-sm text-slate-300">
-                  Fale com a Educatec e conte o seu desafio.
-                </p>
-              </div>
-              <div className="flex flex-wrap gap-3">
-                <Link
-                  href="/contato"
-                  className="rounded-full bg-white px-6 py-2.5 font-semibold text-ink transition hover:bg-slate-200"
-                >
-                  Solicitar proposta
-                </Link>
-                <a
-                  href="https://wa.me/5571999816999"
-                  className="rounded-full border border-white px-6 py-2.5 font-semibold text-white transition hover:bg-white/10"
-                >
-                  WhatsApp
-                </a>
-              </div>
-            </div>
-          </Reveal>
         </div>
+
+        <ProjectContactCta
+          className="mt-10"
+          variant="event"
+          eyebrow="Planeje o próximo passo"
+          title="Quer se preparar melhor para grandes eventos?"
+          description="Converse com Ney Campello sobre planejamento, articulação institucional e preparação de equipes e projetos."
+        />
       </section>
     </article>
   );

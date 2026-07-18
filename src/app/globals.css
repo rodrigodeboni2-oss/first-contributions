@@ -374,3 +374,15 @@ body {
   font-optical-sizing: none;
   font-variation-settings: "opsz" 48;
 }
+
+/* Página Ney Campello — preservada da versão publicada */
+.ney-page {
+  background: linear-gradient(#0b3a66 0%, #0d4c82 8%, #3b76ab 16%, #dce9f4 28%, #faf8f4 44%, #fff 62%, #eaf2fa 78%, #123f6b 94%, #0b3a66 100%);
+}
+
+.ney-copa {
+  background: rgb(255 255 255 / 82%);
+  border: 1px solid rgb(13 76 130 / 12%);
+  box-shadow: 0 24px 70px rgb(10 42 74 / 12%);
+  backdrop-filter: blur(8px);
+}

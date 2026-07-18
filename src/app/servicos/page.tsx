@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 };
 
 const indice = [
-  { numero: "01", rotulo: "Consultoria educacional", href: "#consultoria" },
-  { numero: "02", rotulo: "Gestão institucional", href: "#gestao" },
-  { numero: "03", rotulo: "Formação", href: "#formacao" },
-  { numero: "04", rotulo: "Produção de eventos", href: "#eventos" },
+  { numero: "01", rotulo: "Consultoria educacional", href: "#servico-01" },
+  { numero: "02", rotulo: "Gestão institucional", href: "#servico-02" },
+  { numero: "03", rotulo: "Formação", href: "#servico-03" },
+  { numero: "04", rotulo: "Produção de eventos", href: "#servico-04" },
   { numero: "05", rotulo: "Coordenação de projetos", href: "#coordenacao" },
 ];
 
@@ -64,7 +64,7 @@ export default function Servicos() {
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="#consultoria"
+                href="#servico-01"
                 className="rounded-full bg-white px-6 py-3 font-semibold text-brand transition hover:bg-sky-100"
               >
                 Conheça os serviços
@@ -118,7 +118,7 @@ export default function Servicos() {
 
       <div className="relative mx-auto max-w-6xl px-4 pb-20 md:pb-28">
         {/* D. 01 — Consultoria educacional */}
-        <section id="consultoria" className="scroll-mt-36 pt-14 md:pt-20">
+        <section id="servico-01" className="scroll-mt-36 pt-14 md:pt-20">
           <div className="grid gap-10 rounded-[2rem_2rem_2rem_0] bg-white/90 p-6 shadow-[0_24px_65px_rgba(15,63,101,0.12)] ring-1 ring-white md:grid-cols-12 md:gap-14 md:p-10">
             <Reveal className="md:col-span-5">
               <p className="font-display text-6xl text-sky-100 md:text-7xl">
@@ -198,7 +198,7 @@ export default function Servicos() {
         </section>
 
         {/* E. 02 — Gestão institucional */}
-        <section id="gestao" className="scroll-mt-36 pt-16 md:pt-20">
+        <section id="servico-02" className="scroll-mt-36 pt-16 md:pt-20">
           <div className="grid items-center gap-10 rounded-[2rem_0_2rem_2rem] bg-[#e7f1f8]/95 p-6 shadow-[0_24px_65px_rgba(15,63,101,0.1)] ring-1 ring-white md:grid-cols-12 md:gap-14 md:p-10">
             <Reveal className="order-2 md:order-1 md:col-span-6">
               <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem_0_1.75rem_1.75rem] shadow-[0_20px_50px_rgba(15,63,101,0.18)] md:aspect-[3/4]">
@@ -270,7 +270,7 @@ export default function Servicos() {
         </section>
 
         {/* F. 03 — Formação */}
-        <section id="formacao" className="scroll-mt-36 pt-16 md:pt-20">
+        <section id="servico-03" className="scroll-mt-36 pt-16 md:pt-20">
           <div className="grid items-center gap-10 rounded-[2rem_2rem_2rem_0] bg-white/90 p-6 shadow-[0_24px_65px_rgba(15,63,101,0.12)] ring-1 ring-white md:grid-cols-12 md:gap-14 md:p-10">
             <Reveal className="md:col-span-5">
               <p className="font-display text-6xl text-sky-100 md:text-7xl">
@@ -336,7 +336,7 @@ export default function Servicos() {
         </section>
 
         {/* G. 04 — Produção de eventos */}
-        <section id="eventos" className="scroll-mt-36 pt-16 md:pt-20">
+        <section id="servico-04" className="scroll-mt-36 pt-16 md:pt-20">
           <div className="overflow-hidden rounded-[2rem_2rem_2rem_0] bg-[linear-gradient(145deg,#0b355d_0%,#0d4c82_52%,#1265ab_100%)] p-6 text-white shadow-[0_28px_70px_rgba(8,45,77,0.24)] md:p-10">
             <div className="grid items-center gap-10 md:grid-cols-12 md:gap-12">
               <Reveal className="md:col-span-6">

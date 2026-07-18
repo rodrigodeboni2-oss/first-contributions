@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import ProjectContactCta from "@/components/ProjectContactCta";
 import type { Projeto } from "@/lib/projetos";
 
 // Rede de dados/território — SVG decorativo, abstrato e institucional.
@@ -423,32 +424,13 @@ export default function ObservatorioProjeto({
           </Reveal>
         )}
 
-        <Reveal className="mt-10">
-          <div className="flex flex-col items-start justify-between gap-6 rounded-2xl bg-white p-8 shadow-lg md:flex-row md:items-center md:p-10">
-            <div>
-              <h2 className="font-display text-2xl text-ink md:text-3xl">
-                Um Observatório assim faz sentido para o seu território?
-              </h2>
-              <p className="mt-2 text-slate-600">
-                Fale com a Educatec e conte o seu desafio.
-              </p>
-            </div>
-            <div className="flex shrink-0 flex-wrap gap-4">
-              <Link
-                href="/contato"
-                className="rounded-full bg-brand px-6 py-2.5 font-semibold text-white transition hover:bg-brand-dark"
-              >
-                Solicitar proposta
-              </Link>
-              <a
-                href="https://wa.me/5571999816999"
-                className="rounded-full border border-brand px-6 py-2.5 font-semibold text-brand transition hover:bg-brand-light"
-              >
-                WhatsApp
-              </a>
-            </div>
-          </div>
-        </Reveal>
+        <ProjectContactCta
+          className="mt-10"
+          variant="institutional"
+          eyebrow="Fale sobre o seu projeto"
+          title="Transforme necessidades educacionais em decisões mais bem estruturadas"
+          description="Converse diretamente com Ney Campello sobre diagnóstico, escuta, planejamento e acompanhamento do seu projeto."
+        />
       </section>
     </article>
   );

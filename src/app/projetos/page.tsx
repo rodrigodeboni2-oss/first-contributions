@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import ProjetosGrid from "@/components/ProjetosGrid";
 import Reveal from "@/components/Reveal";
+import ProjectContactCta from "@/components/ProjectContactCta";
 import { projetos } from "@/lib/projetos";
 
 export const metadata: Metadata = {
@@ -35,29 +35,13 @@ export default function Projetos() {
         </div>
 
         {/* Chamada final integrada ao mesmo fundo */}
-        <Reveal className="mt-16 border-t border-brand/15 pt-16 text-center md:mt-20 md:pt-20">
-          <h2 className="mx-auto max-w-2xl font-display text-3xl leading-tight text-slate-900 md:text-4xl">
-            Qual projeto sua instituição precisa colocar em prática?
-          </h2>
-          <p className="mx-auto mt-4 max-w-xl text-slate-700">
-            Conte o desafio. A Educatec pode ajudar a estruturar o caminho,
-            reunir os participantes e acompanhar a execução.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link
-              href="/contato"
-              className="rounded-full bg-brand px-7 py-3 font-semibold text-white transition hover:bg-brand-dark"
-            >
-              Solicitar proposta
-            </Link>
-            <a
-              href="https://wa.me/5571999816999"
-              className="rounded-full border-2 border-brand px-7 py-3 font-semibold text-brand transition hover:bg-brand hover:text-white"
-            >
-              Falar pelo WhatsApp
-            </a>
-          </div>
-        </Reveal>
+        <ProjectContactCta
+          className="mt-16 md:mt-20"
+          variant="portfolio"
+          eyebrow="Fale sobre o seu projeto"
+          title="Vamos estruturar o próximo projeto da sua instituição?"
+          description="Apresente a necessidade diretamente ao Ney Campello e dê o primeiro passo para organizar objetivos, parceiros e execução."
+        />
       </div>
     </div>
   );

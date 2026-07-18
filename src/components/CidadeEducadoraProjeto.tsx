@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import ProjectContactCta from "@/components/ProjectContactCta";
 import type { Projeto } from "@/lib/projetos";
 
 // Círculos concêntricos — motivo visual próprio: a cidade que educa em ondas,
@@ -374,32 +375,13 @@ export default function CidadeEducadoraProjeto({
           </Reveal>
         )}
 
-        <Reveal className="mt-10">
-          <div className="flex flex-col items-start justify-between gap-6 rounded-2xl bg-white p-8 shadow-lg md:flex-row md:items-center md:p-10">
-            <div>
-              <h2 className="font-display text-2xl text-ink md:text-3xl">
-                Sua cidade também pode ser uma Cidade Educadora?
-              </h2>
-              <p className="mt-2 text-slate-600">
-                Fale com a Educatec e conte o seu desafio.
-              </p>
-            </div>
-            <div className="flex shrink-0 flex-wrap gap-4">
-              <Link
-                href="/contato"
-                className="rounded-full bg-brand px-6 py-2.5 font-semibold text-white transition hover:bg-brand-dark"
-              >
-                Solicitar proposta
-              </Link>
-              <a
-                href="https://wa.me/5571999816999"
-                className="rounded-full border border-brand px-6 py-2.5 font-semibold text-brand transition hover:bg-brand-light"
-              >
-                WhatsApp
-              </a>
-            </div>
-          </div>
-        </Reveal>
+        <ProjectContactCta
+          className="mt-10"
+          variant="institutional"
+          eyebrow="Apresente a necessidade da sua instituição"
+          title="Vamos conectar educação, gestão e participação em um projeto consistente?"
+          description="Ney Campello pode ajudar sua instituição a organizar objetivos, articulações e caminhos de implementação."
+        />
       </section>
     </article>
   );

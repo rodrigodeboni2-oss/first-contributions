@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import type { PointerEvent } from "react";
 
 const areas = [
@@ -12,6 +13,7 @@ const areas = [
     layout: "md:col-span-5",
     radius: "rounded-[2rem_5rem_2rem_2rem]",
     position: "center 44%",
+    href: "/servicos#servico-01",
   },
   {
     title: "Gestão e Desenvolvimento Institucional",
@@ -21,6 +23,7 @@ const areas = [
     layout: "md:col-span-7",
     radius: "rounded-[5rem_2rem_2rem_2rem]",
     position: "center 28%",
+    href: "/servicos#servico-02",
   },
   {
     title: "Formação e Desenvolvimento",
@@ -30,6 +33,7 @@ const areas = [
     layout: "md:col-span-7",
     radius: "rounded-[2rem_2rem_5rem_2rem]",
     position: "center 38%",
+    href: "/servicos#servico-03",
   },
   {
     title: "Eventos Esportivos, Culturais e Educacionais",
@@ -39,6 +43,7 @@ const areas = [
     layout: "md:col-span-5",
     radius: "rounded-[2rem_2rem_2rem_5rem]",
     position: "center 46%",
+    href: "/servicos#servico-04",
   },
 ];
 
@@ -73,9 +78,10 @@ export default function AreasAtuacaoMural() {
     <div className="relative mt-10">
       <div className="relative grid gap-3 md:grid-cols-12 md:gap-5">
         {areas.map((area) => (
-          <article
+          <Link
             key={area.title}
-            tabIndex={0}
+            href={area.href}
+            aria-label={`${area.title}: conhecer este serviço`}
             onPointerMove={moveCard}
             onPointerLeave={resetCard}
             className={`group relative min-h-72 overflow-hidden bg-slate-900 shadow-lg outline-none transition-[transform,box-shadow] duration-300 ease-out hover:z-10 hover:shadow-2xl focus-visible:z-10 focus-visible:ring-4 focus-visible:ring-amber-300 motion-reduce:transform-none ${area.layout} ${area.radius}`}
@@ -118,8 +124,11 @@ export default function AreasAtuacaoMural() {
               <p className="mt-3 max-w-xl text-sm leading-relaxed text-sky-50 md:text-base">
                 {area.desc}
               </p>
+              <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-amber-200 opacity-90 transition-all duration-300 group-hover:gap-3 group-hover:text-amber-100 group-focus-visible:gap-3 motion-reduce:transition-none">
+                Conheça este serviço <span aria-hidden="true">→</span>
+              </span>
             </div>
-          </article>
+          </Link>
         ))}
       </div>
     </div>

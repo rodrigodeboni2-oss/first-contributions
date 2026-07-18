@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import ProjectContactCta from "@/components/ProjectContactCta";
 import type { Projeto } from "@/lib/projetos";
 
 const base = "/images/projetos/universidade-aberta";
@@ -418,35 +419,13 @@ export default function UniAcbProjeto({
           </Reveal>
         )}
 
-        <Reveal className="mt-10">
-          <div className="flex flex-col items-start justify-between gap-6 rounded-2xl bg-white p-8 shadow-lg md:flex-row md:items-center md:p-10">
-            <div>
-              <h2 className="font-display text-2xl text-ink md:text-3xl">
-                Sua instituição também pode desenvolver um projeto como este.
-              </h2>
-              <p className="mt-2 max-w-prose text-slate-600">
-                A Educatec desenvolve projetos de educação, inovação,
-                planejamento, articulação institucional e formação de
-                lideranças para governos, empresas, universidades e
-                organizações da sociedade civil.
-              </p>
-            </div>
-            <div className="flex shrink-0 flex-wrap gap-4">
-              <Link
-                href="/contato"
-                className="rounded-full bg-brand px-6 py-2.5 font-semibold text-white transition hover:bg-brand-dark"
-              >
-                Solicitar proposta
-              </Link>
-              <a
-                href="https://wa.me/5571999816999"
-                className="rounded-full border border-brand px-6 py-2.5 font-semibold text-brand transition hover:bg-brand-light"
-              >
-                WhatsApp
-              </a>
-            </div>
-          </div>
-        </Reveal>
+        <ProjectContactCta
+          className="mt-10"
+          variant="institutional"
+          eyebrow="Fale sobre o seu projeto"
+          title="Sua instituição precisa estruturar uma nova iniciativa de formação?"
+          description="Apresente a necessidade ao Ney Campello e converse sobre planejamento, articulação e desenvolvimento do projeto."
+        />
       </section>
     </article>
   );

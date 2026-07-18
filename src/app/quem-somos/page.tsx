@@ -163,7 +163,7 @@ export default function QuemSomos() {
             <ul className="mt-6 grid gap-3 sm:grid-cols-2">
               {valores.map((v) => (
                 <li key={v} className="flex items-start gap-3 text-slate-700">
-                  <span className="mt-1 text-brand">✔</span>
+                  <span aria-hidden="true" className="mt-[0.55rem] h-2 w-2 shrink-0 rounded-full bg-brand shadow-[0_0_0_4px_rgba(18,101,171,0.1)]" />
                   {v}
                 </li>
               ))}

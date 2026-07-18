@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import ProjectContactCta from "@/components/ProjectContactCta";
 import type { Projeto } from "@/lib/projetos";
 
 const IMG = {
@@ -430,17 +431,18 @@ export default function MinasUrbanoProjeto({
                       </span>
                     </Link>
                   )}
-                  <Link
-                    href="/contato"
-                    className="rounded-full bg-brand px-7 py-4 text-center font-semibold text-white transition hover:bg-brand-dark"
-                  >
-                    Converse com a Educatec
-                  </Link>
                 </div>
               </div>
             </Reveal>
           </div>
         </div>
+        <ProjectContactCta
+          className="mx-auto mt-12 max-w-6xl px-4 md:mt-16"
+          variant="sport"
+          eyebrow="Apresente a necessidade da sua instituição"
+          title="Quer transformar sua iniciativa esportiva em um projeto bem estruturado?"
+          description="Fale diretamente com Ney Campello sobre escopo, articulação, planejamento e acompanhamento inicial."
+        />
       </section>
     </article>
   );
