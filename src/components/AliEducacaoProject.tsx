@@ -248,8 +248,8 @@ export default function AliEducacaoProject({
 
       {/* 4. Organização nas regiões */}
       <section className="mx-auto max-w-6xl px-4 py-14 md:py-20">
-        <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-16">
-          <Reveal className="min-w-0 lg:col-span-6">
+        <div className="mx-auto max-w-3xl">
+          <Reveal className="min-w-0">
             <Eyebrow>Presença na Bahia</Eyebrow>
             <h2 className="mt-4 max-w-xl font-display text-[2rem] leading-[1.12] text-slate-900 md:text-[2.5rem]">
               Uma atuação integrada e sensível a cada realidade
@@ -263,65 +263,10 @@ export default function AliEducacaoProject({
               </p>
             </div>
           </Reveal>
-
-          <Reveal className="min-w-0 lg:col-span-6" delay={90}>
-            <figure className="ml-auto w-full max-w-[36rem]">
-              <Image
-                src="/images/projetos/ali-educacao-empreendedora/ali-atividade-formativa.webp"
-                alt="Participantes acompanham uma atividade formativa em um ambiente preparado para aprendizagem."
-                width={1280}
-                height={720}
-                sizes="(max-width: 1024px) 100vw, 576px"
-                className="h-auto w-full rounded-2xl object-contain shadow-[0_18px_48px_rgba(15,23,42,0.12)]"
-              />
-              <figcaption className="mt-3 text-xs leading-relaxed text-slate-500">
-                Atividade formativa acompanhada por participantes.
-              </figcaption>
-            </figure>
-          </Reveal>
         </div>
       </section>
 
-      {/* 5. Experiência de Ney Campello */}
-      <section className="mx-auto max-w-6xl px-4 py-14 md:py-20">
-        <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-16">
-          <Reveal className="min-w-0 lg:col-span-6">
-            <figure className="w-full max-w-[36rem]">
-              <Image
-                src="/images/projetos/ali-educacao-empreendedora/ali-educacao-empreendedora.webp"
-                alt="Ney Campello e profissionais reunidos em uma agenda de Educação Empreendedora do Sebrae."
-                width={1448}
-                height={1086}
-                sizes="(max-width: 1024px) 100vw, 576px"
-                className="h-auto w-full rounded-2xl object-contain shadow-[0_18px_48px_rgba(15,23,42,0.12)]"
-              />
-              <figcaption className="mt-3 text-xs leading-relaxed text-slate-500">
-                Agenda de Educação Empreendedora com a participação de Ney Campello.
-              </figcaption>
-            </figure>
-          </Reveal>
-
-          <Reveal className="min-w-0 lg:col-span-6" delay={90}>
-            <Eyebrow>Experiência e liderança</Eyebrow>
-            <h2 className="mt-4 max-w-xl font-display text-[2rem] leading-[1.12] text-slate-900 md:text-[2.5rem]">
-              Educação, gestão e articulação institucional
-            </h2>
-            <div className="mt-6 max-w-xl space-y-4 text-[15px] leading-[1.72] text-slate-700 md:text-base">
-              <p>
-                A participação da Educatec ocorreu por meio do professor Ney Campello, profissional com extensa trajetória em planejamento educacional, gestão pública, desenvolvimento institucional e coordenação de projetos.
-              </p>
-              <p>
-                No ALI — Educação Empreendedora, essa experiência contribuiu para aproximar planejamento, inovação e realidade educacional, apoiando a organização das atividades e o diálogo entre os diferentes profissionais e instituições envolvidos.
-              </p>
-            </div>
-            <blockquote className="mt-8 max-w-xl border-l-2 border-amber-400 pl-6 font-display text-2xl leading-snug text-[#0d4f86] md:text-[1.75rem]">
-              Educação, inovação e organização trabalhando juntas para fortalecer as escolas e transformar realidades.
-            </blockquote>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* 6. Instituições, próximo projeto e chamada final */}
+      {/* 5. Instituições, próximo projeto e chamada final */}
       <section className="mx-auto max-w-6xl px-4 pb-10 pt-14 md:pb-14 md:pt-20">
         <Reveal>
           <div className="border-y border-slate-300 py-7">
@@ -337,20 +282,12 @@ export default function AliEducacaoProject({
           </div>
         </Reveal>
 
-        {relacionado && relacionado.cardImagem && (
+        {relacionado && (
           <Reveal className="mt-8" delay={70}>
             <Link
               href={`/projetos/${relacionado.slug}`}
-              className="group grid items-center gap-6 border-b border-slate-300 pb-8 transition-colors hover:border-[#0d5b94] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sky-200 sm:grid-cols-[minmax(0,18rem)_minmax(0,1fr)_auto]"
+              className="group grid items-center gap-6 border-b border-slate-300 pb-8 transition-colors hover:border-[#0d5b94] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sky-200 sm:grid-cols-[minmax(0,1fr)_auto]"
             >
-              <Image
-                src={relacionado.cardImagem.src}
-                alt={relacionado.cardImagem.alt}
-                width={640}
-                height={360}
-                sizes="(max-width: 640px) 100vw, 288px"
-                className="h-auto w-full max-w-[18rem] rounded-xl object-contain"
-              />
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
                   Próximo projeto

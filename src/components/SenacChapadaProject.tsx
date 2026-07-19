@@ -63,18 +63,18 @@ export default function SenacChapadaProject({
       <section className="mx-auto max-w-7xl px-4 pb-14 pt-8 md:pb-20 md:pt-12">
         <div className="grid items-stretch gap-6 lg:grid-cols-12 lg:gap-8">
           <Reveal className="flex min-w-0 items-center justify-center lg:col-span-5">
-            <figure className="w-full max-w-[22.5rem]">
+            <figure className="w-full max-w-[18rem]">
               <Image
-                src="/images/projetos/senac-chapada/senac-apresentacao-ney.webp"
-                alt="Ney Campello apresenta o projeto de educação profissional durante encontro com participantes na Chapada Diamantina."
-                width={687}
-                height={1222}
+                src="/images/projetos/senac-chapada-atualizado/senac-grupo-identidade.webp"
+                alt="Ney Campello e profissionais reunidos diante da identidade visual do SENAC."
+                width={853}
+                height={1844}
                 priority
                 sizes="(max-width: 1024px) 100vw, 360px"
                 className="h-auto w-full rounded-2xl object-contain shadow-[0_18px_50px_rgba(15,23,42,0.13)]"
               />
               <figcaption className="mt-3 text-xs leading-relaxed text-slate-500">
-                Apresentação do projeto durante encontro com participantes.
+                Encontro institucional com profissionais do SENAC.
               </figcaption>
             </figure>
           </Reveal>
@@ -139,15 +139,15 @@ export default function SenacChapadaProject({
           <Reveal className="min-w-0 lg:col-span-6" delay={90}>
             <figure className="ml-auto w-full max-w-[36rem]">
               <Image
-                src="/images/projetos/senac-chapada/senac-encontro-auditorio.webp"
-                alt="Participantes acompanham a apresentação do projeto de educação profissional em um auditório."
-                width={1280}
-                height={720}
+                src="/images/projetos/senac-chapada-atualizado/senac-estudantes-atividade.webp"
+                alt="Estudantes participam de uma atividade formativa em sala."
+                width={1448}
+                height={1086}
                 sizes="(max-width: 1024px) 100vw, 576px"
                 className="h-auto w-full rounded-2xl object-contain shadow-[0_18px_48px_rgba(15,23,42,0.12)]"
               />
               <figcaption className="mt-3 text-xs leading-relaxed text-slate-500">
-                Apresentação e diálogo sobre formação e oportunidades profissionais.
+                Estudantes reunidos durante uma atividade formativa.
               </figcaption>
             </figure>
           </Reveal>
@@ -158,17 +158,17 @@ export default function SenacChapadaProject({
       <section className="mx-auto max-w-6xl px-4 py-14 md:py-20">
         <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-20">
           <Reveal className="flex min-w-0 justify-center lg:col-span-5">
-            <figure className="w-full max-w-[24rem]">
+            <figure className="w-full max-w-[18rem]">
               <Image
-                src="/images/projetos/senac-chapada/senac-publico-participante.webp"
-                alt="Participantes reunidos em auditório durante uma etapa de mobilização do projeto."
-                width={960}
-                height={1280}
+                src="/images/projetos/senac-chapada-atualizado/senac-articulacao-biblioteca.webp"
+                alt="Ney Campello conversa com duas profissionais durante uma agenda de articulação institucional."
+                width={853}
+                height={1844}
                 sizes="(max-width: 1024px) 100vw, 384px"
                 className="h-auto w-full rounded-2xl object-contain shadow-[0_18px_48px_rgba(15,23,42,0.12)]"
               />
               <figcaption className="mt-3 text-xs leading-relaxed text-slate-500">
-                Participantes reunidos durante uma etapa de aproximação.
+                Agenda de diálogo e articulação institucional.
               </figcaption>
             </figure>
           </Reveal>
@@ -223,15 +223,15 @@ export default function SenacChapadaProject({
           <Reveal className="min-w-0 lg:col-span-6" delay={90}>
             <figure className="ml-auto w-full max-w-[38rem]">
               <Image
-                src="/images/projetos/senac-chapada/senac-formacao-gastronomia.webp"
-                alt="Participantes com aventais e toucas do SENAC acompanham uma atividade prática em cozinha pedagógica."
-                width={1280}
-                height={720}
+                src="/images/projetos/senac-chapada-atualizado/senac-equipe-institucional.webp"
+                alt="Equipe reunida durante uma agenda de planejamento e implantação do projeto."
+                width={1448}
+                height={1086}
                 sizes="(max-width: 1024px) 100vw, 608px"
                 className="h-auto w-full rounded-2xl object-contain shadow-[0_18px_48px_rgba(15,23,42,0.12)]"
               />
               <figcaption className="mt-3 text-xs leading-relaxed text-slate-500">
-                Atividade prática de educação profissional na área de alimentação.
+                Encontro de planejamento e acompanhamento institucional.
               </figcaption>
             </figure>
           </Reveal>
@@ -251,20 +251,12 @@ export default function SenacChapadaProject({
           </div>
         </Reveal>
 
-        {relacionado && relacionado.cardImagem && (
+        {relacionado && (
           <Reveal className="mt-8" delay={70}>
             <Link
               href={`/projetos/${relacionado.slug}`}
-              className="group grid items-center gap-6 border-b border-slate-300 pb-8 transition-colors hover:border-[#0d5b94] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sky-200 sm:grid-cols-[minmax(0,18rem)_minmax(0,1fr)_auto]"
+              className="group grid items-center gap-6 border-b border-slate-300 pb-8 transition-colors hover:border-[#0d5b94] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sky-200 sm:grid-cols-[minmax(0,1fr)_auto]"
             >
-              <Image
-                src={relacionado.cardImagem.src}
-                alt={relacionado.cardImagem.alt}
-                width={640}
-                height={360}
-                sizes="(max-width: 640px) 100vw, 288px"
-                className="h-auto w-full max-w-[18rem] rounded-xl object-contain"
-              />
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
                   Próximo projeto

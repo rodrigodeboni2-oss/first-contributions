@@ -481,28 +481,25 @@ export const projetos: Projeto[] = [
     ],
     resultados: [],
     hero: {
-      src: "/images/projetos/senac-chapada/senac-apresentacao-ney.webp",
-      alt: "Ney Campello apresenta a iniciativa de educação profissional durante encontro com participantes na Chapada Diamantina",
-      legenda: "Apresentação da iniciativa durante encontro com participantes",
+      src: "/images/projetos/senac-chapada-atualizado/senac-grupo-identidade.webp",
+      alt: "Ney Campello e profissionais reunidos diante da identidade visual do SENAC",
+      legenda: "Encontro institucional com profissionais do SENAC",
     },
     corpo: [
       {
-        src: "/images/projetos/senac-chapada/senac-encontro-auditorio.webp",
-        alt: "Público acompanha a apresentação da iniciativa de educação profissional em um auditório",
-        legenda:
-          "Apresentação da iniciativa e diálogo sobre formação e oportunidades profissionais",
+        src: "/images/projetos/senac-chapada-atualizado/senac-estudantes-atividade.webp",
+        alt: "Estudantes participam de uma atividade formativa em sala",
+        legenda: "Estudantes reunidos durante uma atividade formativa",
       },
       {
-        src: "/images/projetos/senac-chapada/senac-publico-participante.webp",
-        alt: "Participantes reunidos em auditório durante uma etapa de mobilização da iniciativa",
-        legenda:
-          "Participantes reunidos durante uma das etapas de mobilização e aproximação",
+        src: "/images/projetos/senac-chapada-atualizado/senac-articulacao-biblioteca.webp",
+        alt: "Ney Campello conversa com duas profissionais durante uma agenda de articulação institucional",
+        legenda: "Agenda de diálogo e articulação institucional",
       },
       {
-        src: "/images/projetos/senac-chapada/senac-formacao-gastronomia.webp",
-        alt: "Participantes com aventais e toucas do SENAC acompanham uma atividade prática em cozinha pedagógica",
-        legenda:
-          "Atividade prática de educação profissional na área de alimentação",
+        src: "/images/projetos/senac-chapada-atualizado/senac-equipe-institucional.webp",
+        alt: "Equipe reunida durante uma agenda de planejamento e implantação do projeto",
+        legenda: "Encontro de planejamento e acompanhamento institucional",
       },
     ],
     instituicoes: "SENAC Bahia · Educatec",
@@ -510,8 +507,8 @@ export const projetos: Projeto[] = [
     cardSpan: "md:col-span-6",
     cardAspecto: "aspect-[4/3]",
     cardImagem: {
-      src: "/images/projetos/senac-chapada/senac-formacao-gastronomia.webp",
-      alt: "Participantes acompanham atividade prática do SENAC em uma cozinha pedagógica",
+      src: "/images/projetos/senac-chapada-atualizado/senac-grupo-identidade.webp",
+      alt: "Ney Campello e profissionais reunidos diante da identidade visual do SENAC",
     },
   },
   {
@@ -568,17 +565,6 @@ export const projetos: Projeto[] = [
         alt: "Participantes reunidos durante uma etapa de aproximação e mobilização do projeto",
         legenda: "Participantes reunidos durante uma etapa de aproximação",
       },
-      {
-        src: "/images/projetos/ali-educacao-empreendedora/ali-atividade-formativa.webp",
-        alt: "Participantes acompanham uma atividade formativa em um ambiente preparado para aprendizagem",
-        legenda: "Atividade formativa acompanhada por participantes",
-      },
-      {
-        src: "/images/projetos/ali-educacao-empreendedora/ali-educacao-empreendedora.webp",
-        alt: "Ney Campello e profissionais reunidos em uma agenda de Educação Empreendedora do Sebrae",
-        legenda:
-          "Agenda de Educação Empreendedora com a participação de Ney Campello",
-      },
     ],
     instituicoes:
       "Sebrae Bahia · Educatec · Secretarias Municipais de Educação · Instituições públicas de ensino · Equipes gestoras e pedagógicas",
@@ -586,8 +572,8 @@ export const projetos: Projeto[] = [
     cardSpan: "md:col-span-6",
     cardAspecto: "aspect-[4/3]",
     cardImagem: {
-      src: "/images/projetos/ali-educacao-empreendedora/ali-educacao-empreendedora.webp",
-      alt: "Ney Campello e profissionais reunidos em uma agenda de Educação Empreendedora do Sebrae",
+      src: "/images/projetos/ali-educacao-empreendedora/ali-encontro-auditorio.webp",
+      alt: "Participantes acompanham uma apresentação durante uma das atividades do projeto na Bahia",
     },
   },
 ];
