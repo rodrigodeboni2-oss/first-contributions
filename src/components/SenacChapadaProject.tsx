@@ -52,7 +52,13 @@ export default function SenacChapadaProject({
   relacionado: Projeto | null;
 }) {
   return (
-    <article className="overflow-x-clip bg-[radial-gradient(60%_28%_at_92%_7%,rgba(103,190,225,0.16),transparent_72%),linear-gradient(180deg,#eaf5fb_0%,#ffffff_24%,#edf6fb_52%,#ffffff_76%,#dceef8_100%)] pb-10 text-slate-700">
+    <article
+      className="overflow-x-clip bg-[#e7f3f9] pb-10 text-slate-700"
+      style={{
+        backgroundImage:
+          "linear-gradient(180deg, #d8edf8 0%, #fdfefe 18%, #e2f2f9 36%, #ffffff 53%, #deeff8 70%, #fbfdfe 86%, #d5ebf7 100%)",
+      }}
+    >
       {/* 1. Abertura */}
       <section className="mx-auto max-w-7xl px-4 pb-14 pt-8 md:pb-20 md:pt-12">
         <div className="grid items-stretch gap-6 lg:grid-cols-12 lg:gap-8">
