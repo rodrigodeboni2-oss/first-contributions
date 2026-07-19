@@ -11,6 +11,7 @@ import VeraoCostaProjeto from "@/components/VeraoCostaProjeto";
 import MinasUrbanoProjeto from "@/components/MinasUrbanoProjeto";
 import UniAcbProjeto from "@/components/UniAcbProjeto";
 import SenacChapadaProject from "@/components/SenacChapadaProject";
+import AliEducacaoProject from "@/components/AliEducacaoProject";
 import { getProjeto, projetos } from "@/lib/projetos";
 
 export function generateStaticParams() {
@@ -30,6 +31,13 @@ export async function generateMetadata({
       title: `${projeto.tituloCurto} | Educatec`,
       description:
         "Conheça a participação da Educatec na implantação de uma iniciativa de educação profissional do SENAC na Chapada Diamantina, conectando formação prática, mobilização e novas oportunidades.",
+    };
+  }
+  if (projeto.slug === "ali-educacao-empreendedora") {
+    return {
+      title: `${projeto.tituloCurto} | Educatec`,
+      description:
+        "Conheça a participação da Educatec no apoio à organização e à articulação do ALI — Educação Empreendedora nas diferentes regiões da Bahia.",
     };
   }
   return {
@@ -115,6 +123,15 @@ export default async function ProjetoPage({
   if (projeto.slug === "senac-chapada-diamantina") {
     return (
       <SenacChapadaProject
+        projeto={projeto}
+        relacionado={relacionado ?? null}
+      />
+    );
+  }
+
+  if (projeto.slug === "ali-educacao-empreendedora") {
+    return (
+      <AliEducacaoProject
         projeto={projeto}
         relacionado={relacionado ?? null}
       />

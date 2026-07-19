@@ -514,6 +514,82 @@ export const projetos: Projeto[] = [
       alt: "Participantes acompanham atividade prática do SENAC em uma cozinha pedagógica",
     },
   },
+  {
+    slug: "ali-educacao-empreendedora",
+    titulo: "ALI — Agente Local de Inovação: Educação Empreendedora",
+    tituloCurto: "ALI — Educação Empreendedora",
+    categorias: ["Educação", "Inovação"],
+    status: "Realizado",
+    local: "Municípios participantes da Bahia",
+    periodo: "A partir de 2022",
+    area: "Educação, inovação e articulação institucional",
+    papel:
+      "Apoio à organização, ao planejamento e à articulação das atividades nas diferentes regiões da Bahia",
+    resumo:
+      "Apoio à organização e à articulação das atividades do ALI — Educação Empreendedora nas diferentes regiões da Bahia.",
+    contexto: [
+      "O ALI — Educação Empreendedora é uma iniciativa do Sebrae voltada à incorporação da inovação nas práticas educacionais.",
+      "Na Bahia, a Educatec apoiou a organização e a articulação das atividades desenvolvidas nos municípios participantes, contribuindo para integrar equipes, instituições e diferentes regiões do estado.",
+      "A participação ocorreu por meio do professor Ney Campello, líder empresarial da Educatec, que colocou sua experiência em educação, gestão e articulação institucional a serviço do desenvolvimento do projeto.",
+    ],
+    fraseDestaque:
+      "Educação, inovação e organização trabalhando juntas para fortalecer as escolas e transformar realidades.",
+    responsabilidades: [
+      "Apoio ao planejamento e à organização geral das atividades",
+      "Articulação com instituições, equipes e representantes locais",
+      "Acompanhamento das agendas realizadas nos municípios participantes",
+      "Apoio à comunicação entre os diferentes profissionais envolvidos",
+      "Colaboração na integração das ações desenvolvidas nas regiões",
+      "Contribuição para a organização das informações do projeto",
+    ],
+    realizado: [
+      "Apoio à organização do projeto",
+      "Articulação institucional",
+      "Acompanhamento das agendas",
+      "Integração das ações",
+      "Apoio às equipes locais",
+      "Alinhamento das informações",
+    ],
+    resultados: [],
+    hero: {
+      src: "/images/projetos/ali-educacao-empreendedora/ali-apresentacao-ney.webp",
+      alt: "Professor Ney Campello durante uma atividade relacionada ao ALI Educação Empreendedora na Bahia",
+      legenda:
+        "Professor Ney Campello durante atividade relacionada ao projeto na Bahia",
+    },
+    corpo: [
+      {
+        src: "/images/projetos/ali-educacao-empreendedora/ali-encontro-auditorio.webp",
+        alt: "Participantes acompanham uma apresentação durante uma das atividades do projeto na Bahia",
+        legenda: "Encontro relacionado ao desenvolvimento das atividades na Bahia",
+      },
+      {
+        src: "/images/projetos/ali-educacao-empreendedora/ali-publico-participante.webp",
+        alt: "Participantes reunidos durante uma etapa de aproximação e mobilização do projeto",
+        legenda: "Participantes reunidos durante uma etapa de aproximação",
+      },
+      {
+        src: "/images/projetos/ali-educacao-empreendedora/ali-atividade-formativa.webp",
+        alt: "Participantes acompanham uma atividade formativa em um ambiente preparado para aprendizagem",
+        legenda: "Atividade formativa acompanhada por participantes",
+      },
+      {
+        src: "/images/projetos/ali-educacao-empreendedora/ali-educacao-empreendedora.webp",
+        alt: "Ney Campello e profissionais reunidos em uma agenda de Educação Empreendedora do Sebrae",
+        legenda:
+          "Agenda de Educação Empreendedora com a participação de Ney Campello",
+      },
+    ],
+    instituicoes:
+      "Sebrae Bahia · Educatec · Secretarias Municipais de Educação · Instituições públicas de ensino · Equipes gestoras e pedagógicas",
+    relacionado: "copa-feminina-2027",
+    cardSpan: "md:col-span-6",
+    cardAspecto: "aspect-[4/3]",
+    cardImagem: {
+      src: "/images/projetos/ali-educacao-empreendedora/ali-educacao-empreendedora.webp",
+      alt: "Ney Campello e profissionais reunidos em uma agenda de Educação Empreendedora do Sebrae",
+    },
+  },
 ];
 
 export function getProjeto(slug: string): Projeto | undefined {
