@@ -436,12 +436,82 @@ export const projetos: Projeto[] = [
     corpo: [],
     instituicoes:
       "Fundação Paulo Cavalcante · Associação Comercial da Bahia",
-    relacionado: "ipecaeta-cidade-educadora",
+    relacionado: "senac-chapada-diamantina",
     cardSpan: "md:col-span-6",
     cardAspecto: "aspect-[4/3]",
     cardImagem: {
       src: "/images/projetos/universidade-aberta/acb-fachada-palacio.webp",
       alt: "Fachada do palácio histórico da Associação Comercial da Bahia",
+    },
+  },
+  {
+    slug: "senac-chapada-diamantina",
+    titulo:
+      "SENAC — Implantação do Polo de Educação Profissional na Chapada Diamantina",
+    tituloCurto: "SENAC — Polo de Educação Profissional na Chapada Diamantina",
+    categorias: [
+      "Educação profissional",
+      "Formação",
+      "Articulação institucional",
+    ],
+    status: "Em andamento",
+    local: "Chapada Diamantina, Bahia",
+    periodo: "Em implantação",
+    area: "Educação profissional",
+    papel:
+      "Planejamento, mobilização, articulação institucional e apoio à implantação",
+    resumo:
+      "Planejamento, mobilização e apoio à implantação de uma iniciativa que aproxima qualificação profissional, prática e novas oportunidades.",
+    contexto: [
+      "A Educatec participa, em parceria com o SENAC, da implantação de uma iniciativa de educação profissional na Chapada Diamantina. O trabalho reúne planejamento, mobilização, diálogo com instituições e apoio às experiências formativas.",
+      "A iniciativa aproxima qualificação, prática e oportunidades profissionais relacionadas à dinâmica econômica, cultural e turística da região.",
+    ],
+    fraseDestaque:
+      "Formação profissional que aproxima pessoas do mundo do trabalho.",
+    responsabilidades: [
+      "Planejamento da iniciativa",
+      "Articulação institucional",
+      "Mobilização e aproximação com os participantes",
+      "Apoio às experiências formativas",
+    ],
+    realizado: [
+      "Apresentação e mobilização de participantes",
+      "Diálogo sobre formação e oportunidades profissionais",
+      "Atividade prática de educação profissional na área de alimentação",
+    ],
+    resultados: [],
+    hero: {
+      src: "/images/projetos/senac-chapada/senac-apresentacao-ney.webp",
+      alt: "Ney Campello apresenta a iniciativa de educação profissional durante encontro com participantes na Chapada Diamantina",
+      legenda: "Apresentação da iniciativa durante encontro com participantes",
+    },
+    corpo: [
+      {
+        src: "/images/projetos/senac-chapada/senac-encontro-auditorio.webp",
+        alt: "Público acompanha a apresentação da iniciativa de educação profissional em um auditório",
+        legenda:
+          "Apresentação da iniciativa e diálogo sobre formação e oportunidades profissionais",
+      },
+      {
+        src: "/images/projetos/senac-chapada/senac-publico-participante.webp",
+        alt: "Participantes reunidos em auditório durante uma etapa de mobilização da iniciativa",
+        legenda:
+          "Participantes reunidos durante uma das etapas de mobilização e aproximação",
+      },
+      {
+        src: "/images/projetos/senac-chapada/senac-formacao-gastronomia.webp",
+        alt: "Participantes com aventais e toucas do SENAC acompanham uma atividade prática em cozinha pedagógica",
+        legenda:
+          "Atividade prática de educação profissional na área de alimentação",
+      },
+    ],
+    instituicoes: "SENAC Bahia · Educatec",
+    relacionado: "copa-feminina-2027",
+    cardSpan: "md:col-span-6",
+    cardAspecto: "aspect-[4/3]",
+    cardImagem: {
+      src: "/images/projetos/senac-chapada/senac-formacao-gastronomia.webp",
+      alt: "Participantes acompanham atividade prática do SENAC em uma cozinha pedagógica",
     },
   },
 ];

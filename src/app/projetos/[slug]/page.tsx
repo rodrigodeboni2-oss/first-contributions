@@ -10,6 +10,7 @@ import CidadeEducadoraProjeto from "@/components/CidadeEducadoraProjeto";
 import VeraoCostaProjeto from "@/components/VeraoCostaProjeto";
 import MinasUrbanoProjeto from "@/components/MinasUrbanoProjeto";
 import UniAcbProjeto from "@/components/UniAcbProjeto";
+import SenacChapadaProject from "@/components/SenacChapadaProject";
 import { getProjeto, projetos } from "@/lib/projetos";
 
 export function generateStaticParams() {
@@ -24,6 +25,13 @@ export async function generateMetadata({
   const { slug } = await params;
   const projeto = getProjeto(slug);
   if (!projeto) return { title: "Projeto | Educatec" };
+  if (projeto.slug === "senac-chapada-diamantina") {
+    return {
+      title: `${projeto.tituloCurto} | Educatec`,
+      description:
+        "Conheça a participação da Educatec na implantação de uma iniciativa de educação profissional do SENAC na Chapada Diamantina, conectando formação prática, mobilização e novas oportunidades.",
+    };
+  }
   return {
     title: `${projeto.tituloCurto} | Educatec`,
     description: projeto.resumo,
@@ -98,6 +106,15 @@ export default async function ProjetoPage({
   if (projeto.slug === "universidade-aberta-acb") {
     return (
       <UniAcbProjeto
+        projeto={projeto}
+        relacionado={relacionado ?? null}
+      />
+    );
+  }
+
+  if (projeto.slug === "senac-chapada-diamantina") {
+    return (
+      <SenacChapadaProject
         projeto={projeto}
         relacionado={relacionado ?? null}
       />
