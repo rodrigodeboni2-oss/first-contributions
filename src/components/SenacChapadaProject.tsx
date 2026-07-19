@@ -74,7 +74,7 @@ export default function SenacChapadaProject({
           </Reveal>
 
           <Reveal className="min-w-0 lg:col-span-7" delay={100}>
-            <div className="flex h-full min-h-[34rem] flex-col justify-center rounded-2xl bg-[#101d2d] p-7 text-white shadow-[0_20px_60px_rgba(15,23,42,0.18)] md:p-10 lg:p-12">
+            <div className="flex h-full flex-col justify-center rounded-2xl bg-[#101d2d] p-7 text-white shadow-[0_20px_60px_rgba(15,23,42,0.18)] md:p-10 lg:min-h-[34rem] lg:p-12">
               <div className="flex flex-wrap items-center gap-3">
                 <span className="rounded-full border border-amber-400 px-3 py-1 text-xs font-bold uppercase tracking-wide text-amber-300">
                   {projeto.status}
