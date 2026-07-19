@@ -366,15 +366,6 @@ body {
   opacity: 0.9;
 }
 
-/* ============================================================
-   Tipografia display — Fraunces com eixo óptico moderado
-   (remove as formas excêntricas de j/ç/y nos títulos grandes)
-   ============================================================ */
-.font-display {
-  font-optical-sizing: none;
-  font-variation-settings: "opsz" 48;
-}
-
 /* Página Ney Campello — preservada da versão publicada */
 .ney-page {
   background: linear-gradient(#0b3a66 0%, #0d4c82 8%, #3b76ab 16%, #dce9f4 28%, #faf8f4 44%, #fff 62%, #eaf2fa 78%, #123f6b 94%, #0b3a66 100%);

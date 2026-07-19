@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Manrope } from "next/font/google";
+import { Manrope, Source_Serif_4 } from "next/font/google";
 import Link from "next/link";
 import Image from "next/image";
 import "./globals.css";
@@ -9,10 +9,12 @@ const manrope = Manrope({
   subsets: ["latin"],
 });
 
-const fraunces = Fraunces({
+// Serifada display institucional — substitui a Fraunces mantendo a mesma
+// variável CSS, para que todos os títulos troquem de fonte sem tocar em
+// nenhum componente. Formas clássicas, sem o "j" de cauda excêntrica.
+const fraunces = Source_Serif_4({
   variable: "--font-fraunces",
   subsets: ["latin"],
-  axes: ["opsz"],
 });
 
 export const metadata: Metadata = {
